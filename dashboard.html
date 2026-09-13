@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard · N3NY000</title>
+<link rel="preload" as="font" type="font/woff2" href="fonts/plus-jakarta-sans-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/space-grotesk-latin.woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
+<link rel="icon" type="image/png" href="brand/Logo.png">
+<link rel="apple-touch-icon" href="brand/Logo.png">
+<meta property="og:title" content="Dashboard · N3NY000">
+<meta property="og:description" content="N3NY000 GTA 5 mod menu — free and paid keys.">
+<meta property="og:image" content="https://nenyoocheats.org/brand/og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#05040a">
+<link rel="canonical" href="https://nenyoocheats.org/dashboard">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+<script src="/i18n.js"></script>
+<script>document.documentElement.className+=" js";</script>
+<style>
+  .dash-main{max-width:1120px;margin:0 auto;padding:clamp(28px,4vw,42px) 24px 80px;position:relative;z-index:1;}
+  .dash-h1{font-size:clamp(24px,3.4vw,32px);margin-bottom:6px;}
+
+  .dash-who{display:flex;align-items:center;gap:9px;padding:6px 12px;border:1px solid var(--line);font-size:14px;font-weight:600;}
+  .dash-av{
+    width:26px;height:26px;background:var(--grad);display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-display);font-weight:700;font-size:13px;color:#fff;overflow:hidden;flex-shrink:0;
+  }
+  @media (max-width:860px){.dash-who{display:none;}}
+
+  .dash-card{
+    position:relative;background:var(--panel);border:1px solid var(--line);padding:26px;
+    transition:border-color .4s var(--ease),transform .45s var(--ease-out-expo);
+  }
+  .dash-card:hover{border-color:rgba(168,85,247,.3);transform:translateY(-2px);}
+  .dash-lbl{
+    font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.16em;
+    color:var(--brand-3);margin-bottom:20px;display:flex;align-items:center;gap:9px;
+  }
+  .dash-lbl::after{content:'';flex:1;height:1px;background:var(--line);}
+  .dash-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;}
+  .dash-item{padding:14px 0;border-top:1px solid rgba(255,255,255,.07);transition:padding-left .3s var(--ease);}
+  .dash-item:hover{padding-left:6px;}
+  .dash-t{font-weight:700;font-size:14.5px;margin-bottom:4px;}
+  .dash-d{font-size:13px;color:var(--ink-2);line-height:1.5;}
+</style>
+</head>
+<body data-intro="off">
+<a href="#main" class="skip">Skip to content</a>
+<div class="bg-root">
+<canvas id="fx" class="fx-canvas"></canvas>
+<canvas id="catFx" class="fx-canvas"></canvas>
+
+<div style="position:relative;z-index:1;">
+  <!-- dashboard nav -->
+  <header class="nav">
+    <div class="nav-row">
+      <a href="/" class="brand" aria-label="N3NY000 home">
+        <img class="brand-mark" src="brand/Logo@96.gif" alt="" width="44" height="29">
+        <span class="brand-name">N3NY000</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/download">Download</a>
+        <a href="/store">Store</a>
+        <a href="/guides">Guides</a>
+        <a href="/features">Features</a>
+      <a href="/lua">Scripting</a>
+        <a href="/tools">Tools</a>
+      </nav>
+      <div class="nav-actions">
+        <span class="dash-who">
+          <span id="navAvatar" class="dash-av">&middot;</span>
+          <span id="navUsername">&hellip;</span>
+        </span>
+        <button id="logoutBtn" type="button" class="btn btn-ghost btn-sm">Log out</button>
+        <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-drawer">
+    <a href="/download">Download</a>
+    <a href="/store">Store</a>
+    <a href="/guides">Guides</a>
+    <a href="/features">Features</a>
+      <a href="/lua">Scripting</a>
+    <a href="/tools">Tools</a>
+  </div>
+
+  <main id="main" tabindex="-1" class="dash-main">
+    <div style="margin-bottom:26px;">
+      <h1 class="h-sec dash-h1">Welcome back, <span id="welcomeName">…</span></h1>
+      <p style="font-size:15px;color:var(--ink-2);margin:0;">Here's everything about your account.</p>
+    </div>
+
+    <!-- status banner -->
+    <div style="display:flex;align-items:center;gap:12px;background:rgba(52,211,153,0.06);border:1px solid rgba(52,211,153,0.28);padding:15px 20px;margin-bottom:22px;">
+      <span style="width:9px;height:9px;background:var(--green);box-shadow:0 0 10px var(--green);animation:pulseDot 1.8s ease-in-out infinite;"></span>
+      <span style="font-size:14.5px;font-weight:600;color:#5ee0a8;">All systems operational</span>
+      <span style="font-size:14px;color:#7d9c8c;">· Cheat status is currently <strong style="color:#9ff0c8;">Undetected</strong></span>
+      <span id="onlineBanner" style="display:none;margin-left:auto;align-items:center;gap:7px;font-size:13.5px;color:#7d9c8c;"><span style="width:8px;height:8px;background:var(--green);box-shadow:0 0 8px var(--green);border-radius:50%;"></span><strong id="onlineCount" style="color:#5ee0a8;">0</strong>&nbsp;online now</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:16px;">
+
+      <!-- Account info -->
+      <div class="dash-card spot">
+        <div class="dash-lbl">[ ACCOUNT ]</div>
+        <div style="display:flex;align-items:center;gap:15px;margin-bottom:18px;">
+          <button id="accAvatarBtn" title="Change profile picture" style="position:relative;width:54px;height:54px;padding:0;border:none;background:transparent;cursor:pointer;flex-shrink:0;">
+            <div id="accAvatar" style="width:54px;height:54px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:24px;color:#fff;box-shadow:0 8px 22px rgba(124,58,237,0.4);overflow:hidden;">·</div>
+            <span style="position:absolute;right:-3px;bottom:-3px;width:20px;height:20px;background:var(--panel);border:1px solid rgba(255,255,255,0.18);border-radius:50%;display:flex;align-items:center;justify-content:center;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M4 7h3l2-2h6l2 2h3v12H4V7z" stroke="#c4b5fd" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="13" r="3" stroke="#c4b5fd" stroke-width="1.8"/></svg></span>
+          </button>
+          <div>
+            <div style="display:flex;align-items:center;gap:9px;">
+              <span id="accUsername" style="font-family:var(--font-display);font-weight:700;font-size:19px;">…</span>
+              <span id="accPlan" style="background:var(--grad);color:#fff;font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.06em;padding:3px 8px;">—</span>
+            </div>
+            <div id="accEmail" style="font-size:13.5px;color:var(--ink-2);margin-top:3px;">…</div>
+          </div>
+        </div>
+        <div id="pfpEditor" style="display:none;margin-bottom:18px;">
+          <div style="display:flex;gap:0;">
+            <input id="pfpInput" type="text" placeholder="https://image-url.png" style="flex:1;min-width:0;background:var(--bg);border:1px solid var(--line-2);border-right:none;padding:10px 12px;color:var(--ink);font-family:var(--font-mono);font-size:12.5px;" />
+            <button id="pfpSave" style="cursor:pointer;background:var(--grad);border:none;color:#fff;font-family:inherit;font-size:13px;font-weight:600;padding:10px 16px;white-space:nowrap;">Save</button>
+            <button id="pfpCancel" style="cursor:pointer;background:transparent;border:1px solid var(--line-2);border-left:none;color:var(--ink-2);font-family:inherit;font-size:13px;font-weight:600;padding:10px 14px;white-space:nowrap;">Cancel</button>
+          </div>
+          <div id="pfpMsg" style="display:none;margin-top:8px;font-size:12.5px;font-weight:600;"></div>
+          <div style="font-size:11.5px;color:var(--ink-3);margin-top:6px;">Paste a direct image URL (PNG/JPG/GIF). Leave empty to remove.</div>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-top:1px solid rgba(255,255,255,0.08);font-size:14px;"><span style="color:var(--ink-2);">Member since</span><span id="accMemberSince" style="font-weight:600;font-family:var(--font-mono);font-size:13px;">—</span></div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0;border-top:1px solid rgba(255,255,255,0.08);font-size:14px;"><span style="color:var(--ink-2);">Account status</span><span style="font-weight:600;color:#5ee0a8;">Active</span></div>
+      </div>
+
+      <!-- Subscription -->
+      <div class="dash-card spot">
+        <div class="dash-row">
+          <div style="font-family:var(--font-mono);font-size:11.5px;font-weight:600;letter-spacing:0.12em;color:var(--ink-3);">[ SUBSCRIPTIONS ]</div>
+          <span id="subCount" style="font-family:var(--font-mono);font-size:11px;color:var(--ink-3);"></span>
+        </div>
+        <div id="subList">
+          <div style="padding:20px 0;color:var(--ink-4);font-size:13px;">Loading…</div>
+        </div>
+        <a id="upgradeLink" href="/store" style="display:block;text-align:center;margin-top:16px;background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.3);color:#c4b5fd;font-family:inherit;font-size:14px;font-weight:600;padding:11px;cursor:pointer;">Browse the store</a>
+      </div>
+
+      <!-- HWID reset -->
+      <div id="hwidCard" class="dash-card spot">
+        <div class="dash-row">
+          <div style="font-family:var(--font-mono);font-size:11.5px;font-weight:600;letter-spacing:0.12em;color:var(--ink-3);">[ HWID RESET ]</div>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 11A8 8 0 006 5.3L3 8M4 13a8 8 0 0014 5.7l3-2.7M3 4v4h4M21 20v-4h-4" stroke="#7d768c" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="round"/></svg>
+        </div>
+        <p style="font-size:13.5px;color:var(--ink-2);line-height:1.55;margin:0 0 20px;">Reset your hardware ID to use your license on a new device.</p>
+
+        <!-- eligible -->
+        <div id="hwidEligible" style="display:none;">
+          <div style="display:flex;align-items:center;gap:9px;background:rgba(52,211,153,0.07);border:1px solid rgba(52,211,153,0.24);padding:13px 15px;margin-bottom:16px;">
+            <span style="width:8px;height:8px;background:var(--green);"></span>
+            <span style="font-size:13.5px;font-weight:600;color:#5ee0a8;">Reset available now</span>
+          </div>
+          <button id="hwidResetBtn" style="cursor:pointer;width:100%;background:var(--grad);border:none;color:#fff;font-family:inherit;font-size:15px;font-weight:600;padding:13px;box-shadow:0 8px 24px rgba(124,58,237,0.4);">Reset HWID</button>
+        </div>
+        <!-- cooldown -->
+        <div id="hwidCooldown" style="display:none;">
+          <div style="background:var(--bg);border:1px solid var(--line);padding:16px;margin-bottom:16px;">
+            <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-3);margin-bottom:8px;letter-spacing:0.06em;">NEXT RESET AVAILABLE IN</div>
+            <div id="hwidCountdown" style="font-family:var(--font-mono);font-weight:700;font-size:25px;letter-spacing:0.02em;color:var(--ink);">—</div>
+          </div>
+          <button disabled style="width:100%;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);color:var(--ink-4);font-family:inherit;font-size:15px;font-weight:600;padding:13px;cursor:not-allowed;">On cooldown</button>
+        </div>
+        <!-- disabled / unknown -->
+        <div id="hwidDisabled" style="display:none;">
+          <div style="background:var(--bg);border:1px solid var(--line);padding:14px 16px;font-size:13px;color:#8b8499;">HWID resets are not available on your account.</div>
+        </div>
+        <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--ink-3);margin-top:14px;text-align:center;letter-spacing:0.04em;">RESETS USED: <span id="hwidResets">0</span></div>
+      </div>
+
+      <!-- Download -->
+      <div style="background:var(--panel);border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;">
+        <div class="dash-row">
+          <div style="font-family:var(--font-mono);font-size:11.5px;font-weight:600;letter-spacing:0.12em;color:var(--ink-3);">[ DOWNLOAD ]</div>
+          <span style="display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;font-weight:600;color:#5ee0a8;background:rgba(52,211,153,0.12);border:1px solid rgba(52,211,153,0.28);padding:2px 9px;"><span style="width:7px;height:7px;background:var(--green);box-shadow:0 0 8px var(--green);"></span>ONLINE</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+          <div style="width:50px;height:50px;border:1px solid rgba(139,92,246,0.3);background:rgba(139,92,246,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="#a78bfa" stroke-width="1.9" stroke-linecap="square" stroke-linejoin="round"/></svg></div>
+          <div>
+            <div style="font-weight:700;font-size:15.5px;">Nenyoo Loader</div>
+            <div style="font-size:13px;color:var(--ink-2);margin-top:2px;">Windows 10/11 · 64-bit</div>
+          </div>
+        </div>
+        <a href="/download" style="cursor:pointer;width:100%;background:var(--grad);border:none;color:#fff;font-family:inherit;font-size:15px;font-weight:600;padding:13px;box-shadow:0 8px 24px rgba(124,58,237,0.4);display:flex;align-items:center;justify-content:center;gap:9px;margin-top:auto;text-align:center;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke="#fff" stroke-width="1.9" stroke-linecap="square" stroke-linejoin="round"/></svg>
+          Download &amp; Install Guide
+        </a>
+        <div style="font-size:12px;color:var(--ink-3);margin-top:12px;text-align:center;">Make sure BattlEye is OFF before injecting.</div>
+      </div>
+
+    </div>
+
+    <!-- Redeem license -->
+    <div style="background:var(--panel);border:1px solid var(--line);padding:26px;margin-top:16px;">
+      <div class="dash-row">
+        <div style="font-family:var(--font-mono);font-size:11.5px;font-weight:600;letter-spacing:0.12em;color:var(--ink-3);">[ REDEEM LICENSE ]</div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 7a4 4 0 11-3.9 5H7v3H4v-3H2v-3h9.1A4 4 0 0115 7z" stroke="#7d768c" stroke-width="1.7" stroke-linejoin="round"/></svg>
+      </div>
+      <p style="font-size:13.5px;color:var(--ink-2);line-height:1.55;margin:0 0 18px;max-width:560px;">Got a key from a reseller or giveaway? Enter it below to activate it on your account instantly.</p>
+      <div style="display:flex;gap:0;max-width:560px;">
+        <input id="licenseInput" type="text" placeholder="XXXX-XXXX-XXXX-XXXX" style="flex:1;min-width:0;background:var(--bg);border:1px solid var(--line-2);border-right:none;padding:13px 15px;color:var(--ink);font-family:var(--font-mono);font-size:14px;letter-spacing:0.06em;" />
+        <button id="redeemBtn" style="cursor:pointer;background:var(--grad);border:none;color:#fff;font-family:inherit;font-size:14.5px;font-weight:600;padding:13px 24px;white-space:nowrap;box-shadow:0 8px 24px rgba(124,58,237,0.35);">Redeem</button>
+      </div>
+      <div id="redeemMsg" style="display:none;margin-top:14px;font-size:13.5px;font-weight:600;"></div>
+    </div>
+
+    <!-- Link Discord -->
+    <div style="background:var(--panel);border:1px solid var(--line);padding:26px;margin-top:16px;">
+      <div class="dash-row">
+        <div style="font-family:var(--font-mono);font-size:11.5px;font-weight:600;letter-spacing:0.12em;color:var(--ink-3);">[ DISCORD ]</div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#7d768c"><path d="M19.5 5.3A17 17 0 0015.3 4l-.2.4a15.6 15.6 0 014 1.3 14 14 0 00-9.6 0 15.6 15.6 0 014-1.3L13.2 4A17 17 0 008.9 5.3C5.9 9.7 5 14 5.4 18.3a17 17 0 005.2 2.6l.6-1a11 11 0 01-1.9-.9l.3-.2a12 12 0 0010.6 0l.3.2c-.6.4-1.2.7-1.9.9l.6 1a17 17 0 005.2-2.6c.5-5-1-9.2-3.6-13zM10.2 15.6c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.9.9 1.8 2c0 1.1-.8 2-1.8 2zm5.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.9.9 1.8 2c0 1.1-.8 2-1.8 2z"/></svg>
+      </div>
+
+      <!-- not linked -->
+      <div id="discordUnlinked" style="display:none;">
+        <p style="font-size:13.5px;color:var(--ink-2);line-height:1.55;margin:0 0 18px;max-width:560px;">Link your Discord account to get your role automatically, post in the community chat and receive update pings.</p>
+        <button id="linkDiscordBtn" style="cursor:pointer;background:#5865F2;border:none;color:#fff;font-family:inherit;font-size:14.5px;font-weight:600;padding:13px 22px;display:flex;align-items:center;gap:10px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M19.5 5.3A17 17 0 0015.3 4l-.2.4a15.6 15.6 0 014 1.3 14 14 0 00-9.6 0 15.6 15.6 0 014-1.3L13.2 4A17 17 0 008.9 5.3C5.9 9.7 5 14 5.4 18.3a17 17 0 005.2 2.6l.6-1a11 11 0 01-1.9-.9l.3-.2a12 12 0 0010.6 0l.3.2c-.6.4-1.2.7-1.9.9l.6 1a17 17 0 005.2-2.6c.5-5-1-9.2-3.6-13zM10.2 15.6c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.9.9 1.8 2c0 1.1-.8 2-1.8 2zm5.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.9.9 1.8 2c0 1.1-.8 2-1.8 2z"/></svg>
+          Link Discord
+        </button>
+      </div>
+
+      <!-- linked -->
+      <div id="discordLinked" style="display:none;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:46px;height:46px;background:#5865F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M19.5 5.3A17 17 0 0015.3 4l-.2.4a15.6 15.6 0 014 1.3 14 14 0 00-9.6 0 15.6 15.6 0 014-1.3L13.2 4A17 17 0 008.9 5.3C5.9 9.7 5 14 5.4 18.3a17 17 0 005.2 2.6l.6-1a11 11 0 01-1.9-.9l.3-.2a12 12 0 0010.6 0l.3.2c-.6.4-1.2.7-1.9.9l.6 1a17 17 0 005.2-2.6c.5-5-1-9.2-3.6-13zM10.2 15.6c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.9.9 1.8 2c0 1.1-.8 2-1.8 2zm5.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.9.9 1.8 2c0 1.1-.8 2-1.8 2z"/></svg></div>
+            <div>
+              <div style="display:flex;align-items:center;gap:9px;">
+                <span id="discordName" style="font-weight:700;font-size:15.5px;">Discord</span>
+                <span style="display:inline-flex;align-items:center;gap:5px;background:rgba(52,211,153,0.14);color:#5ee0a8;font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.06em;padding:3px 8px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#5ee0a8" stroke-width="3" stroke-linecap="square"/></svg>LINKED</span>
+              </div>
+              <div style="font-size:13px;color:var(--ink-2);margin-top:3px;">Roles synced · update pings enabled</div>
+            </div>
+          </div>
+          <button id="unlinkDiscordBtn" style="cursor:pointer;background:transparent;border:1px solid var(--line-2);color:var(--ink-2);font-family:inherit;font-size:13.5px;font-weight:600;padding:10px 18px;white-space:nowrap;">Unlink</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Announcements + Chat -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;align-items:start;">
+
+      <!-- Announcements (static) -->
+      <div class="dash-card spot">
+        <div class="dash-row">
+          <div style="font-family:var(--font-mono);font-size:11.5px;font-weight:600;letter-spacing:0.12em;color:var(--ink-3);">[ ANNOUNCEMENTS ]</div>
+          <span style="width:8px;height:8px;background:var(--brand-3);box-shadow:0 0 9px var(--brand-3);"></span>
+        </div>
+        <div style="display:flex;flex-direction:column;">
+          <div class="dash-item">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:7px;">
+              <span style="background:rgba(139,92,246,0.14);border:1px solid rgba(139,92,246,0.3);color:#b9a4f5;font-family:var(--font-mono);font-size:10px;font-weight:700;padding:2px 7px;">v2.4.1</span>
+              <span style="font-family:var(--font-mono);font-size:11px;color:var(--ink-3);">LATEST</span>
+            </div>
+            <div class="dash-t">Performance update</div>
+            <div class="dash-d">Improved stability and performance. Recommended for everyone.</div>
+          </div>
+          <div class="dash-item">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:7px;">
+              <span style="background:rgba(139,92,246,0.14);border:1px solid rgba(139,92,246,0.3);color:#b9a4f5;font-family:var(--font-mono);font-size:10px;font-weight:700;padding:2px 7px;">v2.4.0</span>
+            </div>
+            <div class="dash-t">New rendering pipeline</div>
+            <div class="dash-d">Added a new rendering pipeline and configurable smoothing.</div>
+          </div>
+          <div class="dash-item">
+            <div style="display:flex;align-items:center;gap:9px;margin-bottom:7px;">
+              <span style="background:rgba(245,158,66,0.14);border:1px solid rgba(245,158,66,0.32);color:var(--gold);font-family:var(--font-mono);font-size:10px;font-weight:700;padding:2px 7px;">NOTICE</span>
+            </div>
+            <div class="dash-t">Keep BattlEye off</div>
+            <div class="dash-d">Always disable BattlEye before injecting the loader.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Community chat (live) -->
+      <div style="background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column;">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:22px 26px 16px;border-bottom:1px solid rgba(255,255,255,0.07);">
+          <div style="font-family:var(--font-mono);font-size:11.5px;font-weight:600;letter-spacing:0.12em;color:var(--ink-3);">[ COMMUNITY CHAT ]</div>
+          <div style="display:flex;align-items:center;gap:7px;"><span style="width:7px;height:7px;background:var(--green);box-shadow:0 0 8px var(--green);"></span><span id="chatLive" style="font-family:var(--font-mono);font-size:11px;color:#7d9c8c;">LIVE</span></div>
+        </div>
+        <div id="onlineStrip" style="display:none;align-items:center;gap:8px;padding:11px 26px;border-bottom:1px solid rgba(255,255,255,0.07);overflow-x:auto;white-space:nowrap;">
+          <span style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.06em;color:var(--ink-3);flex-shrink:0;">ONLINE</span>
+          <div id="onlineList" style="display:flex;align-items:center;gap:7px;"></div>
+        </div>
+        <div id="chatScroll" style="height:248px;overflow-y:auto;padding:18px 26px;display:flex;flex-direction:column;">
+          <div style="margin:auto;color:var(--ink-4);font-size:13px;">Loading chat…</div>
+        </div>
+        <div id="chatReplyBar" style="display:none;align-items:center;justify-content:space-between;gap:10px;padding:9px 20px;border-top:1px solid rgba(255,255,255,0.07);background:rgba(139,92,246,0.06);">
+          <div style="min-width:0;display:flex;align-items:center;gap:9px;">
+            <span style="width:3px;align-self:stretch;background:var(--brand-3);flex-shrink:0;"></span>
+            <div style="min-width:0;">
+              <div style="font-family:var(--font-mono);font-size:10.5px;font-weight:700;color:#b9a4f5;letter-spacing:0.04em;">REPLYING TO <span id="chatReplyName">—</span></div>
+              <div id="chatReplyPreview" style="font-size:12px;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:260px;">…</div>
+            </div>
+          </div>
+          <button id="chatReplyCancel" style="cursor:pointer;background:transparent;border:none;color:var(--ink-2);font-family:inherit;font-size:18px;line-height:1;padding:4px 6px;flex-shrink:0;" title="Cancel reply">&times;</button>
+        </div>
+        <div style="display:flex;gap:0;padding:0;border-top:1px solid rgba(255,255,255,0.07);">
+          <input id="chatInput" type="text" placeholder="Type a message..." style="flex:1;min-width:0;background:transparent;border:none;padding:15px 20px;color:var(--ink);font-family:inherit;font-size:14px;" />
+          <button id="chatSend" style="cursor:pointer;background:var(--grad);border:none;color:#fff;font-family:inherit;font-size:14px;font-weight:600;padding:0 22px;white-space:nowrap;">Send</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Support -->
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px;background:linear-gradient(135deg,#15122a,#0d0a16);border:1px solid rgba(88,101,242,0.28);padding:24px 28px;margin-top:16px;">
+      <div style="display:flex;align-items:center;gap:16px;">
+        <div style="width:48px;height:48px;background:#5865F2;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M19.5 5.3A17 17 0 0015.3 4l-.2.4a15.6 15.6 0 014 1.3 14 14 0 00-9.6 0 15.6 15.6 0 014-1.3L13.2 4A17 17 0 008.9 5.3C5.9 9.7 5 14 5.4 18.3a17 17 0 005.2 2.6l.6-1a11 11 0 01-1.9-.9l.3-.2a12 12 0 0010.6 0l.3.2c-.6.4-1.2.7-1.9.9l.6 1a17 17 0 005.2-2.6c.5-5-1-9.2-3.6-13zM10.2 15.6c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.9.9 1.8 2c0 1.1-.8 2-1.8 2zm5.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.9.9 1.8 2c0 1.1-.8 2-1.8 2z"/></svg></div>
+        <div>
+          <div style="font-weight:700;font-size:16px;">Need help?</div>
+          <div style="font-size:13.5px;color:var(--ink-2);margin-top:2px;">Join our Discord for setup help, updates and priority support.</div>
+        </div>
+      </div>
+      <a href="https://discord.gg/mwMcEDUjaa" target="_blank" style="cursor:pointer;background:#5865F2;border:none;color:#fff;font-family:inherit;font-size:14.5px;font-weight:600;padding:12px 22px;white-space:nowrap;">Join Discord</a>
+    </div>
+  </main>
+</div>
+
+</div>
+
+<!-- toast -->
+<div id="toast" style="position:fixed;left:50%;bottom:26px;transform:translateX(-50%);z-index:200;display:none;background:var(--panel);border:1px solid rgba(139,92,246,0.4);color:var(--ink);font-size:13.5px;font-weight:600;padding:12px 20px;box-shadow:0 10px 30px rgba(0,0,0,0.5);"></div>
+
+<!-- profile modal -->
+<div id="profileModal" style="display:none;position:fixed;inset:0;z-index:300;background:rgba(3,2,7,0.66);backdrop-filter:blur(5px);align-items:center;justify-content:center;padding:20px;">
+  <div style="width:100%;max-width:380px;background:var(--panel);border:1px solid var(--line-2);position:relative;box-shadow:0 24px 70px rgba(0,0,0,0.6);">
+    <button id="profileClose" title="Close" style="position:absolute;top:10px;right:10px;z-index:2;cursor:pointer;background:transparent;border:none;color:var(--ink-2);font-size:22px;line-height:1;padding:6px 9px;">&times;</button>
+    <div id="profileBody" style="padding:32px 26px 26px;"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script src="site.js"></script>
+<script src="auth.js"></script>
+<script>
+(function(){
+  var A = window.NenyooAuth;
+  var currentUser = null;
+  var hwidTimer = null, chatTimer = null, presenceTimer = null;
+
+  function $(id){ return document.getElementById(id); }
+  function toast(msg, ok){
+    var t = $('toast');
+    t.textContent = msg;
+    t.style.borderColor = ok === false ? 'rgba(240,133,125,0.5)' : 'rgba(139,92,246,0.4)';
+    t.style.display = 'block';
+    clearTimeout(t._h); t._h = setTimeout(function(){ t.style.display = 'none'; }, 3200);
+  }
+  function busy(btn, on, label){ if(!btn) return; btn.disabled = on; btn.style.opacity = on ? '0.6' : '1'; if(label!=null) btn.textContent = label; }
+
+  // Plan metadata. Keyed by public_id; slug points at the products/ artwork.
+  // Clean names here win over whatever the portal config carries.
+  var SUB_META = {
+    '1': { name: 'VIP Enhanced', slug: 'vip_enhanced' },
+    '2': { name: 'VIP Legacy',   slug: 'vip_legacy' },
+    '3': { name: 'MVP',          slug: 'mvp' },
+    '4': { name: 'MVP Plus',     slug: 'mvp_plus' }
+  };
+  // Reverse lookup so a grant identified by public_id, slug OR name resolves.
+  var SUB_LOOKUP = {};
+  Object.keys(SUB_META).forEach(function(id){
+    var m = SUB_META[id];
+    SUB_LOOKUP[id.toLowerCase()] = m;
+    SUB_LOOKUP[m.slug.toLowerCase()] = m;
+    SUB_LOOKUP[m.name.toLowerCase()] = m;
+  });
+
+  function fullDate(ts){
+    if(!ts) return '';
+    var d = new Date(ts);
+    if(isNaN(d.getTime())) return '';
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  }
+
+  // Normalize whatever shape the customer object reports into
+  // [{ key, name, slug, expiresAt }], resolving names/art via SUB_LOOKUP / cfgMap.
+  function ownedSubs(u, cfgMap){
+    var out = [];
+    function push(key, expiresAt){
+      if(key == null || key === '') return;
+      var k = String(key);
+      var meta = SUB_LOOKUP[k.toLowerCase()];
+      out.push({
+        key: k,
+        name: meta ? meta.name : (cfgMap[k.toLowerCase()] || k),
+        slug: meta ? meta.slug : null,
+        expiresAt: expiresAt || null
+      });
+    }
+    // grant objects (most detailed): subscription_grants or session "subscriptions"
+    var grants = u.subscription_grants || u.subscriptions || [];
+    if(Array.isArray(grants)){
+      grants.forEach(function(g){
+        if(g == null) return;
+        if(typeof g === 'string' || typeof g === 'number'){ push(g, null); return; }
+        if(g.status && g.status !== 'active') return;
+        var key = g.public_id != null ? g.public_id : (g.id != null ? g.id : g.name);
+        push(key, g.expires_at || g.expiresAt);
+      });
+    }
+    // plain name strings
+    if(Array.isArray(u.subscription_types)){
+      u.subscription_types.forEach(function(t){ push(t, null); });
+    }
+    // dedupe by key (case-insensitive), first occurrence wins
+    var seen = {}, dedup = [];
+    out.forEach(function(o){ var k = o.key.toLowerCase(); if(!seen[k]){ seen[k] = 1; dedup.push(o); } });
+    return dedup;
+  }
+
+  function renderUser(u){
+    var name = u.display_name || u.username || 'User';
+    var initials = A.getInitials(name);
+    $('navUsername').textContent = name;
+    $('welcomeName').textContent = name;
+    $('accUsername').textContent = name;
+    $('accEmail').textContent = u.email || '—';
+    $('accMemberSince').textContent = A.formatDate(u.created_at || u.join_date);
+    var pic = u.profile_picture || u.avatar;
+    if(pic){
+      $('navAvatar').innerHTML = '<img src="' + A.escapeHtml(pic) + '" alt="" style="width:100%;height:100%;object-fit:cover;">';
+      $('accAvatar').innerHTML = '<img src="' + A.escapeHtml(pic) + '" alt="" style="width:100%;height:100%;object-fit:cover;">';
+    } else {
+      $('navAvatar').textContent = initials;
+      $('accAvatar').textContent = initials;
+    }
+    // cache for the marketing-nav profile pill (nav-auth.js) on other pages
+    try { localStorage.setItem('nenyooProfile', JSON.stringify({ name: name, pic: pic || '' })); } catch(e){}
+  }
+
+  async function loadSubscriptions(){
+    // Build a name lookup from the portal's configured subscriptions.
+    // Keyed by public_id, name AND display_name (all lowercased) so any of
+    // them resolves to the human-readable label.
+    var cfgMap = {};
+    var r = await A.api('GET', '/subscriptions');
+    if(r.ok && r.data && Array.isArray(r.data.subscriptions)){
+      r.data.subscriptions.forEach(function(s){
+        var disp = s.display_name || s.name || s.public_id;
+        [s.public_id, s.name, s.display_name].forEach(function(k){
+          if(k != null) cfgMap[String(k).toLowerCase()] = disp;
+        });
+      });
+    }
+
+    var owned = ownedSubs(currentUser, cfgMap);
+    var list = $('subList');
+
+    if(owned.length === 0){
+      $('accPlan').textContent = 'FREE';
+      $('subCount').textContent = '';
+      list.innerHTML =
+        '<div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:22px 10px;">' +
+          '<div style="font-family:\'Space Grotesk\',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:var(--ink-2);margin-bottom:6px;">No plan yet</div>' +
+          '<div style="font-size:13.5px;color:var(--ink-3);line-height:1.5;">You\'re on the free tier. Redeem a key or grab a plan to unlock the loader.</div>' +
+        '</div>';
+      return;
+    }
+
+    // [ ACCOUNT ] chip summarizes the count instead of duplicating one plan
+    $('accPlan').textContent = owned.length + (owned.length === 1 ? ' PLAN' : ' PLANS');
+    $('subCount').textContent = owned.length + (owned.length === 1 ? ' PLAN' : ' PLANS');
+
+    var html = '';
+    owned.forEach(function(o){
+      var lifetime = !o.expiresAt;
+      var expLabel = lifetime ? 'Lifetime · never expires' : 'Active until ' + (fullDate(o.expiresAt) || '—');
+      var badgeBase = 'font-family:\'JetBrains Mono\',monospace;font-size:10px;font-weight:700;letter-spacing:0.06em;padding:4px 9px;flex-shrink:0;';
+      var badge = lifetime
+        ? '<span style="' + badgeBase + 'background:rgba(167,139,250,0.16);color:#c4b5fd;">LIFETIME</span>'
+        : '<span style="' + badgeBase + 'background:rgba(52,211,153,0.14);color:#5ee0a8;">ACTIVE</span>';
+      // animated GIF with PNG fallback if art is missing
+      var art = o.slug
+        ? '<img src="products/' + o.slug + '@128.gif" alt="" onerror="this.onerror=null;this.src=\'products/' + o.slug + '.png\';" style="width:48px;height:48px;object-fit:contain;flex-shrink:0;" />'
+        : '<div style="width:48px;height:48px;flex-shrink:0;background:var(--grad);display:flex;align-items:center;justify-content:center;font-family:\'Space Grotesk\',sans-serif;font-weight:700;font-size:18px;color:#fff;">' + A.escapeHtml(A.getInitials(o.name)) + '</div>';
+      html +=
+        '<div style="display:flex;align-items:center;gap:14px;padding:14px 0;border-top:1px solid rgba(255,255,255,0.08);">' +
+          art +
+          '<div style="flex:1;min-width:0;">' +
+            '<div style="font-family:\'Space Grotesk\',sans-serif;font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:0.01em;">' + A.escapeHtml(o.name) + '</div>' +
+            '<div style="font-size:12.5px;color:var(--ink-2);margin-top:3px;">' + A.escapeHtml(expLabel) + '</div>' +
+          '</div>' +
+          badge +
+        '</div>';
+    });
+    list.innerHTML = html;
+  }
+
+  function renderHwid(u){
+    var st = u.hwid_state;
+    var policy = u.hwid_policy;
+    if(hwidTimer){ clearInterval(hwidTimer); hwidTimer = null; }
+    if(!policy || !policy.enabled){ $('hwidCard').style.display = 'none'; return; }
+    $('hwidCard').style.display = '';
+    $('hwidEligible').style.display = 'none';
+    $('hwidCooldown').style.display = 'none';
+    $('hwidDisabled').style.display = 'none';
+    $('hwidResets').textContent = (st && st.manual_reset_count != null) ? st.manual_reset_count : 0;
+
+    var status = st ? st.status : 'unknown';
+    if(status === 'eligible' && st && st.can_reset){
+      $('hwidEligible').style.display = 'block';
+    } else if(status === 'cooldown'){
+      $('hwidCooldown').style.display = 'block';
+      var remaining = (st && st.cooldown_remaining_seconds) || 0;
+      var paint = function(){ $('hwidCountdown').textContent = A.formatDuration(remaining); };
+      paint();
+      hwidTimer = setInterval(function(){
+        remaining -= 1;
+        if(remaining <= 0){ clearInterval(hwidTimer); hwidTimer = null; reloadSession(); return; }
+        paint();
+      }, 1000);
+    } else {
+      $('hwidDisabled').style.display = 'block';
+    }
+  }
+
+  async function reloadSession(){
+    var r = await A.api('GET', '/auth/session');
+    var cust = A.pickCustomer(r.data);
+    if(r.ok && cust){ currentUser = cust; renderHwid(currentUser); loadSubscriptions(); }
+  }
+
+  function showFatal(msg){
+    var m = document.querySelector('main');
+    if(m) m.innerHTML = '<div style="max-width:520px;margin:80px auto;text-align:center;background:var(--panel);border:1px solid var(--line);padding:40px 30px;">' +
+      '<div style="font-family:\'Space Grotesk\',sans-serif;font-weight:700;font-size:22px;text-transform:uppercase;margin-bottom:12px;">Can\'t load dashboard</div>' +
+      '<p style="font-size:14px;color:var(--ink-2);line-height:1.6;margin:0 0 24px;">' + A.escapeHtml(msg) + '</p>' +
+      '<a href="/login" style="display:inline-block;background:var(--grad);color:#fff;font-weight:600;font-size:14px;padding:12px 26px;">Back to login</a></div>';
+  }
+
+  async function doHwidReset(){
+    var btn = $('hwidResetBtn');
+    busy(btn, true, 'Resetting…');
+    var r = await A.api('POST', '/auth/hwid/reset');
+    busy(btn, false, 'Reset HWID');
+    if(r.ok){ toast('HWID reset successfully!'); reloadSession(); }
+    else { toast(r.data.message || 'Failed to reset HWID', false); }
+  }
+
+  async function doRedeem(){
+    var input = $('licenseInput');
+    var key = input.value.trim();
+    var msg = $('redeemMsg');
+    msg.style.display = 'none';
+    if(!key){ msg.style.display = 'block'; msg.style.color = '#f0857d'; msg.textContent = 'Enter a valid license key to redeem.'; return; }
+    var btn = $('redeemBtn');
+    busy(btn, true, '…');
+    var r = await A.api('POST', '/auth/redeem-key', { key: key });
+    busy(btn, false, 'Redeem');
+    msg.style.display = 'block';
+    if(r.ok){
+      msg.style.color = '#5ee0a8';
+      msg.textContent = 'License redeemed successfully — your plan has been updated.';
+      input.value = '';
+      reloadSession();
+    } else {
+      msg.style.color = '#f0857d';
+      msg.textContent = r.data.message || 'Invalid license key.';
+    }
+  }
+
+  function togglePfp(show){
+    var ed = $('pfpEditor');
+    var on = (show == null) ? (ed.style.display === 'none') : show;
+    ed.style.display = on ? 'block' : 'none';
+    $('pfpMsg').style.display = 'none';
+    if(on){
+      $('pfpInput').value = (currentUser && (currentUser.profile_picture || currentUser.avatar)) || '';
+      $('pfpInput').focus();
+    }
+  }
+  async function doUpdatePfp(){
+    var url = $('pfpInput').value.trim();
+    var msg = $('pfpMsg');
+    msg.style.display = 'none';
+    var btn = $('pfpSave');
+    busy(btn, true, '…');
+    var r = await A.api('PUT', '/profile', { profile_picture: url });
+    busy(btn, false, 'Save');
+    if(r.ok){
+      if(currentUser){ currentUser.profile_picture = url; currentUser.avatar = url; }
+      renderUser(currentUser);
+      togglePfp(false);
+      toast('Profile picture updated');
+    } else {
+      msg.style.display = 'block';
+      msg.style.color = '#f0857d';
+      msg.textContent = (r.data && r.data.message) || 'Failed to update profile picture.';
+    }
+  }
+
+  // ---- view another user's profile ----
+  function closeProfile(){ $('profileModal').style.display = 'none'; }
+  function pickProfile(d){
+    if(!d) return null;
+    return d.profile || d.user || d.customer || (d.data && (d.data.profile || d.data.user || d.data.customer)) || d;
+  }
+  async function openProfile(uid, uname){
+    var modal = $('profileModal'), body = $('profileBody');
+    modal.style.display = 'flex';
+    body.innerHTML = '<div style="padding:30px 0;text-align:center;color:var(--ink-4);font-size:13px;">Loading profile…</div>';
+    var ep = (uid != null && uid !== '')
+      ? '/profile/' + encodeURIComponent(uid)
+      : '/users/by-username/' + encodeURIComponent(uname);
+    var r = await A.api('GET', ep);
+    var p = (r.ok) ? pickProfile(r.data) : null;
+    if(!p || (!p.username && !p.display_name)){
+      body.innerHTML = '<div style="padding:24px 0;text-align:center;"><div style="font-weight:700;font-size:16px;margin-bottom:6px;">Profile unavailable</div><div style="font-size:13px;color:var(--ink-2);">' + A.escapeHtml((r.data && r.data.message) || 'Could not load this user\'s profile.') + '</div></div>';
+      return;
+    }
+    cacheSenderPic(p);
+    var name = p.display_name || p.username || 'User';
+    var pic = p.profile_picture || p.avatar;
+    var online = isOnline({ id: p.id, username: p.username });
+    var avatar = pic
+      ? '<span style="width:84px;height:84px;display:block;overflow:hidden;border-radius:50%;border:1px solid var(--line-2);"><img src="' + A.escapeHtml(pic) + '" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></span>'
+      : '<span style="width:84px;height:84px;border-radius:50%;background:' + colorFor(name) + ';display:flex;align-items:center;justify-content:center;font-family:\'Space Grotesk\',sans-serif;font-weight:700;font-size:30px;color:var(--panel);">' + A.escapeHtml(A.getInitials(name)) + '</span>';
+
+    var rows = '';
+    function row(label, value){
+      if(!value) return;
+      rows += '<div style="display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-top:1px solid rgba(255,255,255,0.08);font-size:13.5px;"><span style="color:var(--ink-2);flex-shrink:0;">' + label + '</span><span style="font-weight:600;text-align:right;word-break:break-word;">' + A.escapeHtml(value) + '</span></div>';
+    }
+    row('Location', p.location);
+    row('Member since', (p.created_at || p.join_date) ? A.formatDate(p.created_at || p.join_date) : '');
+    if(p.friendship_status && p.friendship_status !== 'none' && p.friendship_status !== 'self'){
+      row('Friendship', String(p.friendship_status).replace(/_/g, ' '));
+    }
+
+    body.innerHTML =
+      '<div style="display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:18px;">' +
+        '<div style="position:relative;margin-bottom:14px;">' + avatar +
+          (online ? '<span title="Online" style="position:absolute;right:4px;bottom:4px;width:15px;height:15px;border-radius:50%;background:var(--green);border:2.5px solid var(--panel);"></span>' : '') +
+        '</div>' +
+        '<div style="font-family:\'Space Grotesk\',sans-serif;font-weight:700;font-size:21px;">' + A.escapeHtml(name) + '</div>' +
+        (p.username ? '<div style="font-family:\'JetBrains Mono\',monospace;font-size:12.5px;color:var(--ink-3);margin-top:2px;">@' + A.escapeHtml(p.username) + '</div>' : '') +
+        '<div style="font-size:12px;font-weight:600;color:' + (online ? '#5ee0a8' : 'var(--ink-3)') + ';margin-top:8px;">' + (online ? '● Online' : '○ Offline') + '</div>' +
+        (p.status ? '<div style="font-size:13.5px;color:var(--ink-2);margin-top:10px;font-style:italic;">"' + A.escapeHtml(p.status) + '"</div>' : '') +
+      '</div>' +
+      (p.bio ? '<div style="font-size:13.5px;color:#d4cfe0;line-height:1.55;background:var(--bg);border:1px solid rgba(255,255,255,0.08);padding:13px 15px;margin-bottom:6px;">' + A.escapeHtml(p.bio) + '</div>' : '') +
+      rows;
+  }
+
+  async function loadOAuthStatus(){
+    var r = await A.api('GET', '/auth/oauth/status');
+    var linked = false, name = 'Discord';
+    if(r.ok && r.data && Array.isArray(r.data.links)){
+      var link = r.data.links.find(function(l){ return l.provider === 'discord'; });
+      if(link){ linked = true; name = link.display_name || link.username || link.provider_username || 'Discord'; }
+    }
+    $('discordLinked').style.display = linked ? 'block' : 'none';
+    $('discordUnlinked').style.display = linked ? 'none' : 'block';
+    if(linked) $('discordName').textContent = name;
+  }
+
+  async function doUnlinkDiscord(){
+    var btn = $('unlinkDiscordBtn');
+    busy(btn, true, '…');
+    var r = await A.api('POST', '/auth/oauth/unlink', { provider: 'discord' });
+    busy(btn, false, 'Unlink');
+    if(r.ok){ toast('Discord unlinked'); loadOAuthStatus(); }
+    else { toast(r.data.message || 'Failed to unlink', false); }
+  }
+
+  // ---- chat sounds (WebAudio — no asset needed) ----
+  var sndCtx = null;
+  function audioCtx(){
+    if(sndCtx) return sndCtx;
+    try { sndCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e){ sndCtx = null; }
+    return sndCtx;
+  }
+  // Browsers start the context suspended until a user gesture; resume on first interaction.
+  ['click','keydown'].forEach(function(ev){
+    window.addEventListener(ev, function(){ var c = audioCtx(); if(c && c.state === 'suspended') c.resume(); }, { once: true });
+  });
+  function beep(freqs, dur, vol){
+    var ctx = audioCtx(); if(!ctx) return;
+    if(ctx.state === 'suspended'){ try { ctx.resume(); } catch(e){} }
+    var t0 = ctx.currentTime;
+    freqs.forEach(function(f, i){
+      var o = ctx.createOscillator(), g = ctx.createGain();
+      o.type = 'sine'; o.frequency.value = f;
+      var start = t0 + i * 0.07;
+      g.gain.setValueAtTime(0.0001, start);
+      g.gain.linearRampToValueAtTime(vol, start + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.0001, start + dur);
+      o.connect(g); g.connect(ctx.destination);
+      o.start(start); o.stop(start + dur + 0.02);
+    });
+  }
+  function playSend(){ beep([660], 0.12, 0.10); }            // short blip
+  function playReceive(){ beep([523.25, 783.99], 0.16, 0.09); } // soft two-tone
+
+  // ---- live chat ----
+  var CHAT_COLORS = ['#f0857d','#6cb6f0','#7ee0a8','#a78bfa','#f0b35d','#e88bd0'];
+  function colorFor(name){ var h = 0; name = String(name); for(var i=0;i<name.length;i++) h = (h*31 + name.charCodeAt(i)) >>> 0; return CHAT_COLORS[h % CHAT_COLORS.length]; }
+
+  var replyTo = null;          // { id, name, preview }
+  var lastChatId = null;       // highest message id seen
+  var chatPrimed = false;      // don't beep on the first load
+
+  function myChatId(){
+    var u = currentUser || {};
+    if(u.id != null) return 'id:' + u.id;
+    if(u.customer_id != null) return 'id:' + u.customer_id;
+    if(u.username) return 'un:' + String(u.username).toLowerCase();
+    return null;
+  }
+  function isMine(s){
+    s = s || {};
+    var mine = myChatId(); if(!mine) return false;
+    if(s.id != null && ('id:' + s.id) === mine) return true;
+    if(s.customer_id != null && ('id:' + s.customer_id) === mine) return true;
+    if(s.username && ('un:' + String(s.username).toLowerCase()) === mine) return true;
+    return false;
+  }
+
+  // ---- presence (online members) ----
+  var onlineSet = {};     // 'id:..' / 'un:..' -> true, for the green dots
+  var avatarCache = {};   // 'id:..' / 'un:..' -> profile picture url
+  function isOnline(s){
+    s = s || {};
+    if(s.id != null && onlineSet['id:' + s.id]) return true;
+    if(s.customer_id != null && onlineSet['id:' + s.customer_id]) return true;
+    if(s.username && onlineSet['un:' + String(s.username).toLowerCase()]) return true;
+    return false;
+  }
+  function setOnlineCount(n){
+    $('onlineCount').textContent = n;
+    $('onlineBanner').style.display = 'flex';
+    $('chatLive').textContent = n + ' ONLINE';
+  }
+  async function loadPresence(){
+    var members = [], count = null, page = 1, guard = 0;
+    while(page && guard < 5){
+      var r = await A.api('GET', '/members?online=true&limit=50&page=' + page);
+      if(!(r.ok && r.data && Array.isArray(r.data.members))) break;
+      if(count == null && typeof r.data.online_count === 'number') count = r.data.online_count;
+      members = members.concat(r.data.members);
+      if(r.data.has_more){ page++; guard++; } else { page = 0; }
+    }
+    var set = {};
+    members.forEach(function(m){
+      if(m.id != null) set['id:' + m.id] = true;
+      if(m.username) set['un:' + String(m.username).toLowerCase()] = true;
+      var pic = m.profile_picture || m.avatar;
+      if(pic){
+        if(m.id != null) avatarCache['id:' + m.id] = pic;
+        if(m.username) avatarCache['un:' + String(m.username).toLowerCase()] = pic;
+      }
+    });
+    onlineSet = set;
+    setOnlineCount(count != null ? count : members.length);
+    renderOnlineStrip(members, count);
+  }
+
+  function renderOnlineStrip(members, count){
+    var strip = $('onlineStrip'), list = $('onlineList');
+    if(!members.length){ strip.style.display = 'none'; return; }
+    var SHOWN = 12;
+    var html = '';
+    members.slice(0, SHOWN).forEach(function(m){
+      var nm = m.display_name || m.username || 'User';
+      var pic = m.profile_picture || m.avatar;
+      var av = pic
+        ? '<span style="width:20px;height:20px;display:block;overflow:hidden;border-radius:50%;flex-shrink:0;"><img src="' + A.escapeHtml(pic) + '" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></span>'
+        : '<span style="width:20px;height:20px;border-radius:50%;background:' + colorFor(nm) + ';display:flex;align-items:center;justify-content:center;font-family:\'Space Grotesk\',sans-serif;font-weight:700;font-size:9px;color:var(--panel);flex-shrink:0;">' + A.escapeHtml(A.getInitials(nm)) + '</span>';
+      html += '<span' + profileAttrs(m) + ' style="display:inline-flex;align-items:center;gap:6px;background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.22);padding:3px 9px 3px 4px;border-radius:999px;flex-shrink:0;cursor:pointer;">' +
+        '<span style="position:relative;display:flex;flex-shrink:0;">' + av +
+          '<span style="position:absolute;right:-1px;bottom:-1px;width:7px;height:7px;border-radius:50%;background:var(--green);border:1.5px solid var(--panel);"></span>' +
+        '</span>' +
+        '<span style="font-size:11.5px;font-weight:600;color:#d4cfe0;max-width:96px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + A.escapeHtml(nm) + '</span>' +
+      '</span>';
+    });
+    var total = (count != null) ? count : members.length;
+    if(total > SHOWN){
+      html += '<span style="font-family:\'JetBrains Mono\',monospace;font-size:11px;font-weight:600;color:#7d9c8c;flex-shrink:0;padding-left:2px;">+' + (total - SHOWN) + '</span>';
+    }
+    list.innerHTML = html;
+    strip.style.display = 'flex';
+  }
+
+  function cacheSenderPic(s){
+    s = s || {};
+    var pic = s.profile_picture || s.avatar;
+    if(!pic) return;
+    if(s.id != null) avatarCache['id:' + s.id] = pic;
+    if(s.username) avatarCache['un:' + String(s.username).toLowerCase()] = pic;
+  }
+  function senderPic(s){
+    s = s || {};
+    if(s.profile_picture) return s.profile_picture;
+    if(s.avatar) return s.avatar;
+    if(isMine(s)) return (currentUser && (currentUser.profile_picture || currentUser.avatar)) || '';
+    if(s.id != null && avatarCache['id:' + s.id]) return avatarCache['id:' + s.id];
+    if(s.username && avatarCache['un:' + String(s.username).toLowerCase()]) return avatarCache['un:' + String(s.username).toLowerCase()];
+    return '';
+  }
+  // Returns 'class/data/title' attrs (no style) when the sender is openable, else ''.
+  function profileAttrs(s){
+    s = s || {};
+    var uid = s.id != null ? s.id : (s.customer_id != null ? s.customer_id : '');
+    var uname = s.username || '';
+    if(uid === '' && uname === '') return '';
+    return ' class="chatProfile" data-uid="' + A.escapeHtml(uid) + '" data-uname="' + A.escapeHtml(uname) + '" title="View profile"';
+  }
+  function chatAvatar(pic, name, online, sender){
+    var inner = pic
+      ? '<img src="' + A.escapeHtml(pic) + '" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">'
+      : '<span style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:\'Space Grotesk\',sans-serif;font-weight:700;font-size:12px;color:var(--panel);background:' + colorFor(name) + ';">' + A.escapeHtml(A.getInitials(name)) + '</span>';
+    var dot = online
+      ? '<span title="Online" style="position:absolute;right:-1px;bottom:-1px;width:8px;height:8px;border-radius:50%;background:var(--green);border:1.5px solid var(--panel);"></span>'
+      : '';
+    var attrs = profileAttrs(sender);
+    var cur = attrs ? 'cursor:pointer;' : '';
+    return '<span' + attrs + ' style="position:relative;display:block;width:30px;height:30px;flex-shrink:0;' + cur + '">' +
+      '<span style="display:block;width:30px;height:30px;overflow:hidden;border-radius:50%;border:1px solid var(--line);">' + inner + '</span>' +
+      dot + '</span>';
+  }
+
+  function msgFields(m){
+    var s = m.sender || {};
+    return {
+      id: m.id != null ? m.id : m.message_id,
+      name: s.display_name || s.username || m.display_name || m.username || 'Unknown',
+      text: m.content || m.message || ''
+    };
+  }
+
+  function setReply(id, name, preview){
+    if(id == null) return;
+    replyTo = { id: id, name: name, preview: preview };
+    $('chatReplyName').textContent = name;
+    $('chatReplyPreview').textContent = preview;
+    $('chatReplyBar').style.display = 'flex';
+    $('chatInput').focus();
+  }
+  function clearReply(){
+    replyTo = null;
+    $('chatReplyBar').style.display = 'none';
+  }
+
+  function jumpToMessage(id){
+    if(id == null || id === '') return;
+    var box = $('chatScroll');
+    var target = box.querySelector('[data-mid="' + String(id).replace(/"/g, '\\"') + '"]');
+    if(!target){ toast('Original message is no longer loaded', false); return; }
+    // center it within the scroll box (without scrolling the whole page)
+    var br = box.getBoundingClientRect(), tr = target.getBoundingClientRect();
+    box.scrollTop += (tr.top - br.top) - (box.clientHeight / 2 - target.clientHeight / 2);
+    // brief highlight flash
+    target.style.transition = 'background-color 0.25s, box-shadow 0.25s';
+    target.style.backgroundColor = 'rgba(167,139,250,0.12)';
+    target.style.boxShadow = '0 0 0 6px rgba(167,139,250,0.12)';
+    clearTimeout(target._flash);
+    target._flash = setTimeout(function(){
+      target.style.backgroundColor = '';
+      target.style.boxShadow = '';
+    }, 1200);
+  }
+
+  async function loadChat(){
+    var r = await A.api('GET', '/chat/messages?limit=50');
+    var box = $('chatScroll');
+    if(r.ok && r.data && Array.isArray(r.data.messages)){
+      if(r.data.messages.length === 0){ box.innerHTML = '<div style="margin:auto;color:var(--ink-4);font-size:13px;">No messages yet. Start the conversation!</div>'; return; }
+      var html = '';
+      var maxId = lastChatId;
+      var gotNewFromOther = false;
+      r.data.messages.forEach(function(m){
+        var f = msgFields(m);
+        var idn = parseInt(f.id, 10);
+        if(!isNaN(idn)){
+          if(lastChatId != null && idn > lastChatId && !isMine(m.sender)) gotNewFromOther = true;
+          if(maxId == null || idn > maxId) maxId = idn;
+        }
+        var quote = '';
+        var rt = m.reply_to;
+        if(rt){
+          var rAuthor = rt.author || rt.display_name || rt.username || 'Unknown';
+          var rPreview = rt.preview || rt.content || rt.message || '';
+          var rId = rt.id != null ? rt.id : (rt.message_id != null ? rt.message_id : '');
+          var jumpAttrs = (rId !== '') ? ' class="chatJump" data-target="' + A.escapeHtml(rId) + '" title="Jump to replied message"' : '';
+          var jumpCur = (rId !== '') ? 'cursor:pointer;' : '';
+          quote = '<div' + jumpAttrs + ' style="display:flex;gap:7px;align-items:stretch;margin-bottom:4px;opacity:0.85;' + jumpCur + '">' +
+            '<span style="width:2px;background:var(--brand-3);flex-shrink:0;"></span>' +
+            '<div style="min-width:0;font-size:11.5px;line-height:1.4;">' +
+              '<span style="color:' + colorFor(rAuthor) + ';font-weight:700;">↩ ' + A.escapeHtml(rAuthor) + '</span> ' +
+              '<span style="color:#8b8499;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + A.escapeHtml(rPreview) + '</span>' +
+            '</div></div>';
+        }
+        var replyBtn = f.id != null
+          ? '<button class="chatReplyBtn" data-id="' + A.escapeHtml(f.id) + '" data-name="' + A.escapeHtml(f.name) + '" data-text="' + A.escapeHtml(f.text) + '" style="background:none;border:none;color:var(--ink-3);font-family:\'JetBrains Mono\',monospace;font-size:10.5px;font-weight:600;cursor:pointer;padding:0;letter-spacing:0.04em;">↩ REPLY</button>'
+          : '';
+        cacheSenderPic(m.sender);
+        var av = chatAvatar(senderPic(m.sender), f.name, isOnline(m.sender), m.sender);
+        var nameAttrs = profileAttrs(m.sender);
+        var nameCur = nameAttrs ? 'cursor:pointer;' : '';
+        html += '<div data-mid="' + A.escapeHtml(f.id != null ? f.id : '') + '" style="display:flex;gap:10px;margin-bottom:14px;border-radius:6px;">' +
+          av +
+          '<div style="flex:1;min-width:0;">' +
+            quote +
+            '<div style="display:flex;align-items:center;gap:8px;margin-bottom:3px;">' +
+              '<span' + nameAttrs + ' style="font-family:\'JetBrains Mono\',monospace;font-size:11px;font-weight:700;color:' + colorFor(f.name) + ';' + nameCur + '">' + A.escapeHtml(f.name) + '</span>' +
+              replyBtn +
+            '</div>' +
+            '<div style="font-size:13.5px;color:#d4cfe0;line-height:1.5;">' + A.escapeHtml(f.text) + '</div>' +
+          '</div></div>';
+      });
+      box.innerHTML = html;
+      box.scrollTop = box.scrollHeight;
+      if(chatPrimed && gotNewFromOther) playReceive();
+      lastChatId = maxId;
+      chatPrimed = true;
+    } else if(r.data && (r.data.error_code === 'LOGIN_REQUIRED')){
+      A.clearToken(); window.location.href = '/login';
+    } else if(r.data && r.data.error_code === 'MEMBERSHIP_REQUIRED'){
+      box.innerHTML = '<div style="margin:auto;color:var(--ink-3);font-size:13px;text-align:center;">Redeem a membership key to join the community chat.</div>';
+    }
+  }
+
+  async function sendChat(){
+    var input = $('chatInput');
+    var v = input.value.trim();
+    if(!v) return;
+    input.value = '';
+    var body = { content: v };
+    if(replyTo && replyTo.id != null){ var pid = parseInt(replyTo.id, 10); body.parent_id = isNaN(pid) ? replyTo.id : pid; }
+    clearReply();
+    var r = await A.api('POST', '/chat/messages', body);
+    if(r.ok){ playSend(); loadChat(); }
+    else { toast(r.data.message || 'Failed to send message', false); if(r.data && r.data.error_code === 'MEMBERSHIP_REQUIRED') loadChat(); }
+  }
+
+  async function doLogout(){
+    try { await A.api('POST', '/auth/logout'); } catch(e){}
+    A.clearToken();
+    try { localStorage.removeItem('nenyooProfile'); } catch(e){}
+    window.location.href = '/';
+  }
+
+  // ---- init ----
+  (async function(){
+    // returning from a Discord link?
+    var cb = A.handleOAuthCallback();
+    if(cb && cb.type === 'error') toast(cb.message || 'Discord error', false);
+    if(cb && cb.type === 'success') toast(cb.message || 'Discord linked');
+
+    if(!A.getToken()){ window.location.href = '/login'; return; }
+    var r = await A.api('GET', '/auth/session');
+    console.log('[dashboard] /auth/session →', r.status, r.data);
+
+    // Network / CORS failure — don't loop back to login, explain it.
+    if(r.status === 0){
+      showFatal('Could not reach the authentication server. If you opened this page directly from a file, host it on your site instead — the API blocks other origins (CORS).');
+      return;
+    }
+    // Explicitly invalid session (expired / bad token) — clear and go to login.
+    if(r.status === 401 || (r.data && (r.data.valid === false || r.data.success === false))){
+      A.clearToken();
+      window.location.href = '/login';
+      return;
+    }
+    var cust = A.pickCustomer(r.data);
+    if(!cust){
+      // Logged in but the response shape was unexpected — surface it instead of looping.
+      showFatal('Signed in, but the account data came back in an unexpected format. Open the browser console and send me the "/auth/session →" line so I can map the fields.');
+      return;
+    }
+    currentUser = cust;
+
+    renderUser(currentUser);
+    renderHwid(currentUser);
+    loadSubscriptions();
+    loadOAuthStatus();
+    loadPresence();
+    loadChat();
+    chatTimer = setInterval(loadChat, 5000);
+    presenceTimer = setInterval(loadPresence, 20000);
+
+    $('logoutBtn').addEventListener('click', doLogout);
+    $('accAvatarBtn').addEventListener('click', function(){ togglePfp(); });
+    $('pfpSave').addEventListener('click', doUpdatePfp);
+    $('pfpCancel').addEventListener('click', function(){ togglePfp(false); });
+    $('pfpInput').addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doUpdatePfp(); } else if(e.key === 'Escape'){ togglePfp(false); } });
+    $('hwidResetBtn').addEventListener('click', doHwidReset);
+    $('redeemBtn').addEventListener('click', doRedeem);
+    $('licenseInput').addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doRedeem(); } });
+    $('linkDiscordBtn').addEventListener('click', function(){ A.startOAuth('discord', 'link'); });
+    $('unlinkDiscordBtn').addEventListener('click', doUnlinkDiscord);
+    $('chatSend').addEventListener('click', sendChat);
+    $('chatInput').addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); sendChat(); }
+      else if(e.key === 'Escape'){ clearReply(); }
+    });
+    $('chatReplyCancel').addEventListener('click', clearReply);
+    $('chatScroll').addEventListener('click', function(e){
+      var jump = e.target.closest && e.target.closest('.chatJump');
+      if(jump){ jumpToMessage(jump.getAttribute('data-target')); return; }
+      var btn = e.target.closest && e.target.closest('.chatReplyBtn');
+      if(!btn) return;
+      setReply(btn.getAttribute('data-id'), btn.getAttribute('data-name'), btn.getAttribute('data-text'));
+    });
+    // open a user's profile from any chat avatar/name or online-strip chip
+    document.addEventListener('click', function(e){
+      var el = e.target.closest && e.target.closest('.chatProfile');
+      if(!el) return;
+      openProfile(el.getAttribute('data-uid'), el.getAttribute('data-uname'));
+    });
+    $('profileClose').addEventListener('click', closeProfile);
+    $('profileModal').addEventListener('click', function(e){ if(e.target === this) closeProfile(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeProfile(); });
+  })();
+})();
+</script>
+</body>
+</html>
