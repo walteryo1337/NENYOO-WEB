@@ -67,6 +67,8 @@
         <a href="/store">Store</a>
         <a href="/guides">Guides</a>
         <a href="/features">Features</a>
+  <a href="/fivem">FiveM</a>
+      <a href="/fivem">FiveM</a>
       <a href="/lua">Scripting</a>
         <a href="/tools">Tools</a>
       </nav>
@@ -85,6 +87,7 @@
     <a href="/store">Store</a>
     <a href="/guides">Guides</a>
     <a href="/features">Features</a>
+  <a href="/fivem">FiveM</a>
       <a href="/lua">Scripting</a>
     <a href="/tools">Tools</a>
   </div>
@@ -365,7 +368,8 @@
     '1': { name: 'VIP Enhanced', slug: 'vip_enhanced' },
     '2': { name: 'VIP Legacy',   slug: 'vip_legacy' },
     '3': { name: 'MVP',          slug: 'mvp' },
-    '4': { name: 'MVP Plus',     slug: 'mvp_plus' }
+    '4': { name: 'MVP Plus',     slug: 'mvp_plus' },
+    'fivem': { name: 'FiveM',    slug: 'fivem' }
   };
   // Reverse lookup so a grant identified by public_id, slug OR name resolves.
   var SUB_LOOKUP = {};
@@ -375,6 +379,7 @@
     SUB_LOOKUP[m.slug.toLowerCase()] = m;
     SUB_LOOKUP[m.name.toLowerCase()] = m;
   });
+  SUB_LOOKUP['1978843387'] = SUB_META.fivem;
 
   function fullDate(ts){
     if(!ts) return '';
@@ -390,10 +395,12 @@
     function push(key, expiresAt){
       if(key == null || key === '') return;
       var k = String(key);
-      var meta = SUB_LOOKUP[k.toLowerCase()];
+      var configuredName = cfgMap[k.toLowerCase()];
+      var meta = SUB_LOOKUP[k.toLowerCase()] ||
+                 (configuredName && SUB_LOOKUP[String(configuredName).toLowerCase()]);
       out.push({
         key: k,
-        name: meta ? meta.name : (cfgMap[k.toLowerCase()] || k),
+        name: meta ? meta.name : (configuredName || k),
         slug: meta ? meta.slug : null,
         expiresAt: expiresAt || null
       });

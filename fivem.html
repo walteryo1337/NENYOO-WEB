@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FiveM Mod Menu · N3NY000</title>
+<meta name="description" content="N3NY000 for FiveM: Combat, ESP, visual effects, themes and streamer tools. Try it with a four-hour free key or get lifetime access for $12.50.">
+<meta name="keywords" content="Nenyoo FiveM, N3NY000 FiveM, FiveM mod menu, FiveM menu, FiveM ESP, FiveM aimbot, FiveM visual effects, FiveM free key, FiveM lifetime menu">
+<link rel="preload" as="font" type="font/woff2" href="fonts/plus-jakarta-sans-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/space-grotesk-latin.woff2" crossorigin>
+<link rel="preload" as="image" href="products/fivem-hero.jpg">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="brand/Logo.png">
+<link rel="apple-touch-icon" href="brand/Logo.png">
+<link rel="canonical" href="https://nenyoocheats.org/fivem">
+<meta property="og:title" content="FiveM Mod Menu · N3NY000">
+<meta property="og:description" content="Combat, ESP and visual customization for FiveM, with a four-hour free key and lifetime paid access.">
+<meta property="og:image" content="https://nenyoocheats.org/products/fivem-hero.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nenyoocheats.org/fivem">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#05040a">
+<script src="/i18n.js"></script>
+<script>document.documentElement.className+=" js";</script>
+<style>
+  .fm-hero{padding:clamp(54px,8vw,100px) 0 clamp(62px,8vw,104px);position:relative;overflow:hidden;}
+  .fm-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,4,10,.98) 8%,rgba(5,4,10,.82) 48%,rgba(5,4,10,.45)),url('products/fivem-hero.jpg') center/cover no-repeat;opacity:.78;}
+  .fm-hero::after{content:'';position:absolute;inset:auto 0 0;height:44%;background:linear-gradient(transparent,var(--bg));}
+  .fm-hero-in{position:relative;z-index:1;max-width:690px;}
+  .fm-title{font-family:var(--font-display);font-size:clamp(48px,8vw,90px);line-height:.95;letter-spacing:-.055em;margin:20px 0;}
+  .fm-title span{background:linear-gradient(100deg,#fff,#bdefff 45%,var(--brand-3));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .fm-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;}
+  .fm-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
+  .fm-meta .pill{background:rgba(5,4,10,.58);backdrop-filter:blur(8px);}
+  .fm-split{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:stretch;}
+  .fm-access{position:relative;padding:30px;background:var(--panel);border:1px solid var(--line);overflow:hidden;}
+  .fm-access::before{content:'';position:absolute;left:0;right:0;top:0;height:3px;background:var(--grad);}
+  .fm-access.free::before{background:linear-gradient(90deg,var(--cyan),#6ee7b7);}
+  .fm-price{display:flex;align-items:baseline;gap:10px;margin:22px 0 6px;}
+  .fm-price b{font-family:var(--font-mono);font-size:42px;letter-spacing:-.04em;}
+  .fm-price span{color:var(--ink-3);font-size:13px;}
+  .fm-access p{color:var(--ink-3);line-height:1.65;}
+  .fm-features{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  .fm-cat{padding:28px;background:var(--panel);border:1px solid var(--line);position:relative;}
+  .fm-cat-num{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;color:var(--brand-3);text-transform:uppercase;}
+  .fm-cat h3{font-family:var(--font-display);font-size:25px;margin:8px 0 18px;}
+  .fm-list{display:grid;gap:11px;}
+  .fm-item{display:flex;align-items:flex-start;gap:10px;color:var(--ink-2);font-size:13.5px;line-height:1.5;}
+  .fm-item::before{content:'+';font-family:var(--font-mono);font-weight:700;color:var(--cyan);}
+  .fm-paid{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;color:var(--gold);border:1px solid rgba(240,179,93,.34);padding:2px 5px;margin-left:5px;white-space:nowrap;}
+  .fm-steps{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);background:var(--panel);}
+  .fm-step{padding:28px;position:relative;}
+  .fm-step+.fm-step{border-left:1px solid var(--line);}
+  .fm-step b{display:block;font-family:var(--font-display);font-size:18px;margin:10px 0 8px;}
+  .fm-step p{font-size:13px;line-height:1.6;color:var(--ink-3);margin:0;}
+  .fm-step-num{font-family:var(--font-mono);font-size:11px;color:var(--brand-3);}
+  .fm-note{padding:20px 22px;border:1px solid rgba(34,211,238,.24);background:rgba(34,211,238,.055);font-size:13px;color:var(--ink-2);line-height:1.65;}
+  @media(max-width:760px){.fm-split,.fm-features{grid-template-columns:1fr}.fm-steps{grid-template-columns:1fr}.fm-step+.fm-step{border-left:0;border-top:1px solid var(--line)}.fm-hero::before{background:linear-gradient(rgba(5,4,10,.68),rgba(5,4,10,.96)),url('products/fivem-hero.jpg') center/cover no-repeat}.fm-actions .btn{width:100%}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Product",
+  "name":"N3NY000 for FiveM",
+  "image":"https://nenyoocheats.org/products/fivem-hero.jpg",
+  "description":"A FiveM menu with Combat, ESP, visual effects, themes and streamer tools.",
+  "brand":{"@type":"Brand","name":"N3NY000"},
+  "offers":[
+    {"@type":"Offer","name":"Four-hour free access","price":"0.00","priceCurrency":"USD","url":"https://nenyoocheats.org/freekey"},
+    {"@type":"Offer","name":"Lifetime access","price":"12.50","priceCurrency":"USD","url":"https://fusiondash.myshopify.com/products/nenyooo-fivem"}
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<div class="bg-root">
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<canvas id="fx" class="fx-canvas"></canvas><canvas id="catFx" class="fx-canvas"></canvas>
+<div class="scanlines" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav-row">
+    <a href="/" class="brand" aria-label="N3NY000 home"><img class="brand-mark" src="brand/Logo@96.gif" alt="" width="44" height="29"><span class="brand-name">N3NY000</span></a>
+    <nav class="nav-links"><a href="/download">Download</a><a href="/store">Store</a><a href="/guides">Guides</a><a href="/features">Features</a><a href="/fivem" aria-current="page">FiveM</a><a href="/lua">Scripting</a><a href="/tools">Tools</a></nav>
+    <div class="nav-actions"><a href="/login" class="btn btn-ghost btn-sm">Login</a><a href="/signup" class="btn btn-primary btn-sm">Get Access</a><button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button></div>
+  </div>
+</header>
+<div class="nav-drawer"><a href="/download">Download</a><a href="/store">Store</a><a href="/guides">Guides</a><a href="/features">Features</a><a href="/fivem">FiveM</a><a href="/lua">Scripting</a><a href="/tools">Tools</a><a href="/login">Login</a><a href="/signup" class="btn btn-primary btn-block">Get Access</a></div>
+
+<main id="main" tabindex="-1">
+  <section class="fm-hero">
+    <div class="wrap"><div class="fm-hero-in reveal">
+      <span class="kicker">N3NY000 for FiveM</span>
+      <h1 class="fm-title">Make FiveM <span>your own.</span></h1>
+      <p class="h-sub">Combat controls, detailed ESP, deep Legacy visual effects and a fully themeable interface—all delivered through the same Nenyoo loader.</p>
+      <div class="fm-actions"><a href="/freekey" class="btn btn-primary btn-lg" data-magnet>Get a 4-hour free key</a><a href="https://fusiondash.myshopify.com/products/nenyooo-fivem" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">Get lifetime access · $12.50</a></div>
+      <div class="fm-meta"><span class="pill"><span class="dot"></span>Available now</span><span class="pill">Free + paid access</span><span class="pill">Shared loader</span></div>
+    </div></div>
+  </section>
+
+  <section class="sec" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="kicker">Choose access</span><h2 class="h-sec">Try it free or keep it</h2><p class="h-sub">Both versions use the same loader. Paid access unlocks the complete FiveM feature set.</p></div>
+      <div class="fm-split">
+        <article class="fm-access free reveal spot"><span class="tag tag-cyan">FREE ACCESS</span><div class="fm-price"><b>$0</b><span>four hours</span></div><p>Generate a FiveM free key, enter it in the loader, and use the available free features for four hours.</p><a href="/freekey" class="btn btn-ghost btn-block">Generate free key</a></article>
+        <article class="fm-access reveal spot"><span class="tag tag-brand">FULL ACCESS</span><div class="fm-price"><b>$12.50</b><span>one-time · lifetime</span></div><p>Unlock the paid Combat, Visuals and privacy features with lifetime access through your Nenyoo account.</p><a href="https://fusiondash.myshopify.com/products/nenyooo-fivem" target="_blank" rel="noopener" class="btn btn-primary btn-block">Purchase FiveM</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:20px;">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="kicker">Feature overview</span><h2 class="h-sec">Four focused categories</h2><p class="h-sub">A readable view of the strongest options in the current build. Items marked Paid require lifetime access.</p></div>
+      <div class="fm-features">
+        <article class="fm-cat reveal spot"><span class="fm-cat-num">01 · Targeting</span><h3>Combat</h3><div class="fm-list"><div class="fm-item">Lock-on aimbot with smoothing, distance and bone controls</div><div class="fm-item">Dynamic FOV, velocity prediction and sticky targeting</div><div class="fm-item">Friend filtering, target markers and aim activation modes</div><div class="fm-item">Silent Aim with hit chance and damage controls <span class="fm-paid">PAID</span></div><div class="fm-item">Magic Bullet target redirection <span class="fm-paid">PAID</span></div></div></article>
+        <article class="fm-cat reveal spot"><span class="fm-cat-num">02 · Overlay + VFX</span><h3>Visuals</h3><div class="fm-list"><div class="fm-item">Ped, vehicle and object ESP with distance controls</div><div class="fm-item">Skeletons, health, armor, names, snaplines and off-screen indicators</div><div class="fm-item">ESP color modes and configurable drawing styles</div><div class="fm-item">Sky, weather, lighting, water and post-processing controls <span class="fm-paid">PAID</span></div><div class="fm-item">Particles, fire, decals and vehicle lighting <span class="fm-paid">PAID</span></div></div></article>
+        <article class="fm-cat reveal spot"><span class="fm-cat-num">03 · Camera</span><h3>Misc</h3><div class="fm-list"><div class="fm-item">Override the in-game field of view</div><div class="fm-item">Tune the camera width for your preferred setup</div><div class="fm-item">Saved values persist between launches</div></div></article>
+        <article class="fm-cat reveal spot"><span class="fm-cat-num">04 · Personalization</span><h3>Settings</h3><div class="fm-list"><div class="fm-item">Automatic or manual UI scaling</div><div class="fm-item">Custom menu position and overlay scaling</div><div class="fm-item">Bundled theme plus custom Lua themes</div><div class="fm-item">Save and switch named FiveM configurations</div><div class="fm-item">Streamer Mode for privacy-sensitive labels <span class="fm-paid">PAID</span></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:22px;">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="kicker">Getting started</span><h2 class="h-sec">One loader, three steps</h2></div>
+      <div class="fm-steps reveal">
+        <div class="fm-step"><span class="fm-step-num">01</span><b>Get access</b><p>Create an account for paid access or generate a four-hour FiveM key.</p></div>
+        <div class="fm-step"><span class="fm-step-num">02</span><b>Open the loader</b><p>Sign in or enter the free key, then select FiveM from your products.</p></div>
+        <div class="fm-step"><span class="fm-step-num">03</span><b>Start FiveM first</b><p>Join the game, return to the loader and press Load when the FiveM process is detected.</p></div>
+      </div>
+      <div class="fm-note reveal" style="margin-top:16px;">FiveM must already be running before the loader can load the menu. The status on the FiveM tab updates automatically.</div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:12px;">
+    <div class="wrap"><div class="cta reveal"><span class="kicker">Ready to start?</span><h2 class="h-sec">Try N3NY000 for FiveM</h2><p class="h-sub">Start with a four-hour key or unlock the complete build for $12.50.</p><div class="fm-actions" style="justify-content:center;"><a href="/freekey" class="btn btn-primary btn-lg">Get free access</a><a href="/download" class="btn btn-ghost btn-lg">Download loader</a></div></div></div>
+  </section>
+</main>
+
+<footer class="foot"><div class="foot-in"><div style="display:flex;align-items:center;gap:12px;"><img class="brand-mark" src="brand/Logo@96.gif" alt="" width="40" height="26" style="width:40px;height:26px;"><div><div class="brand-name" style="font-size:16px;">N3NY000</div><div style="font-size:12px;color:var(--ink-4);">&copy; 2026 N3NY000 Mod Menu. Not affiliated with Cfx.re, Rockstar Games or Take-Two.</div></div></div><div class="foot-links"><a href="https://discord.gg/mwMcEDUjaa" target="_blank" rel="noopener">DISCORD</a><a href="/download">DOWNLOAD</a><a href="/store">STORE</a><a href="/fivem">FIVEM</a><a href="/guides">GUIDES</a><a href="/tos">TERMS</a></div></div></footer>
+</div>
+<script src="app.js"></script><script src="site.js"></script><script src="nav-auth.js"></script>
+</body>
+</html>

@@ -541,7 +541,7 @@ body.intro-lock{overflow:hidden;}
   .cards.cols-4{grid-template-columns:repeat(2,1fr);}
   .gridline.cols-3,.cards.cols-3{grid-template-columns:repeat(2,1fr);}
 }
-@media (max-width:860px){
+@media (max-width:1060px){
   .nav-links{display:none;}
   .nav-actions .btn-ghost{display:none;}
   .nav-burger{display:block;}
