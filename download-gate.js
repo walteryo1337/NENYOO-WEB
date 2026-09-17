@@ -2,7 +2,7 @@
 (function () {
   'use strict';
 
-  var PRIMARY_DOWNLOAD_URL = 'https://filego.at/bucket/478623fd-e37e-4f4b-81f4-98056832f534';
+  var PRIMARY_DOWNLOAD_URL = 'https://filego.at/bucket/18f2b182-91fd-4e35-9272-3644db211ea1';
   var A = window.NenyooAuth;
   var gate = document.getElementById('downloadGate');
   var unlocked = document.getElementById('downloadUnlocked');

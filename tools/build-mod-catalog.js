@@ -10,6 +10,10 @@ const OUTPUT_DIR = path.join(SITE_ROOT, 'mod-data');
 const SOURCE_BASE_URL = 'https://raw.githubusercontent.com/XXTOUCOXX/INF_DATA/refs/heads/main/';
 const CATALOGS = ['Vehicles', 'Outfits'];
 const CHUNK_SIZE = 256;
+const SUPPORTED_FORMATS = {
+  Vehicles: new Set(['.xml', '.txt', '.ini', '.json']),
+  Outfits: new Set(['.txt', '.ini', '.json'])
+};
 
 function parseArgs(argv) {
   const options = {
@@ -99,6 +103,8 @@ function buildCatalog(sourceRoot, kind, info) {
       missing.push('(empty file field)');
       continue;
     }
+
+    if (!SUPPORTED_FORMATS[kind].has(path.extname(downloadPath).toLowerCase())) continue;
 
     const key = downloadPath.toLowerCase();
     if (seen.has(key)) continue;
