@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /dashboard
-Disallow: /forgot
-
-Sitemap: https://nenyoocheats.org/sitemap.xml
+Disallow: /forgot-password

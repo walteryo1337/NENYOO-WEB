@@ -1,0 +1,51 @@
+{
+  "tool": "Built-in image_gen",
+  "prompt": "Use case: logo-brand. Square premium Nenyoo product logo artwork for near-black violet website. Reference only the bold angular capital N silhouette. Show ONLY one large capital N, absolutely NO wordmark, NO product name, NO text below, NO other letters, NO tiny typography. Center the N both vertically and horizontally, filling 60% of square, generous negative space. Redesign as flawless polished liquid platinum chrome, highly reflective mirror-like broad surfaces reflecting sweeping violet studio lights, crisp bevels, convincing 3D depth, clean sharp silhouette. Sophisticated flowing smoked-glass ribbons sweep behind the N through near-black charcoal atmosphere, lavender reflections, restrained cyan edge glints and extremely fine sparse particles. Full-bleed background beautiful and dimensional but understated, matching luxury black/violet glass-ribbon web design. Avoid rainbow glitch shards, distressed texture, fake checkerboard, frames, busy neon noise, bright solid backdrops. Accent variation: ",
+  "variants": [
+    {
+      "id": "gtav",
+      "accent": "violet with subtle emerald and sunset-gold reflections",
+      "path": "C:\\Users\\navjo\\.codex\\generated_images\\01a0b3a1-e8ce-7a22-bfeb-aa5567d8e475\\exec-d6e05c0c-f4ce-402c-b965-99daab7d0b2b.png"
+    },
+    {
+      "id": "fivem",
+      "accent": "violet with electric cyan reflections",
+      "path": "C:\\Users\\navjo\\.codex\\generated_images\\01a0b3a1-e8ce-7a22-bfeb-aa5567d8e475\\exec-3e26d49a-5eeb-473c-86f8-98a0e18b2ac3.png"
+    },
+    {
+      "id": "redm",
+      "accent": "violet with restrained crimson and copper reflections",
+      "path": "C:\\Users\\navjo\\.codex\\generated_images\\01a0b3a1-e8ce-7a22-bfeb-aa5567d8e475\\exec-2067946d-34d1-49d9-a141-3fb2454a6d94.png"
+    },
+    {
+      "id": "r6",
+      "accent": "violet with icy silver-blue reflections",
+      "path": "C:\\Users\\navjo\\.codex\\generated_images\\01a0b3a1-e8ce-7a22-bfeb-aa5567d8e475\\exec-2cdab3c2-85e5-46cf-9aeb-7240a19659e7.png"
+    },
+    {
+      "id": "rdr2",
+      "accent": "violet with warm amber reflections",
+      "path": "C:\\Users\\navjo\\.codex\\generated_images\\01a0b3a1-e8ce-7a22-bfeb-aa5567d8e475\\exec-c1d6c5de-a1a5-4308-8e0d-99b4e64e0ce2.png"
+    },
+    {
+      "id": "free",
+      "accent": "violet with soft mint reflections",
+      "path": "C:\\Users\\navjo\\.codex\\generated_images\\01a0b3a1-e8ce-7a22-bfeb-aa5567d8e475\\exec-4899c194-9fec-45a9-b403-cf88959a9fd3.png"
+    },
+    {
+      "id": "vip",
+      "accent": "rich amethyst and platinum reflections",
+      "path": "C:\\Users\\navjo\\.codex\\generated_images\\01a0b3a1-e8ce-7a22-bfeb-aa5567d8e475\\exec-50ca21b7-888e-4a0b-b344-cf0440150596.png"
+    },
+    {
+      "id": "mvp",
+      "accent": "violet with champagne-gold reflections",
+      "path": "C:\\Users\\navjo\\.codex\\generated_images\\01a0b3a1-e8ce-7a22-bfeb-aa5567d8e475\\exec-dbe2e5d0-4e5e-4e3b-9579-7b288bedac90.png"
+    },
+    {
+      "id": "mvp-plus",
+      "accent": "violet with rose-gold and magenta reflections",
+      "path": "C:\\Users\\navjo\\.codex\\generated_images\\01a0b3a1-e8ce-7a22-bfeb-aa5567d8e475\\exec-b84b3246-2b30-44d2-9341-f2fe1511d445.png"
+    }
+  ]
+}
