@@ -1,26 +1,68 @@
 {
-  "tool": "Built-in image_gen",
-  "prompt": "Use case: compositing, product brand artwork. Create square website product artwork. Input 1 is the ORIGINAL Nenyoo N logo, exact identity reference. Input 2 is the product game illustration background. Recompose input 2 into a beautiful square keeping its recognizable game setting, painterly videogame art, with a subtle near-black/violet darkening to match the website. Overlay ONLY the original bold blocky sans-serif N silhouette from input 1, centered, about 45% of canvas width. Preserve its thick angular geometry and diagonal cut. Flat pearl-white face with extremely subtle satin sheen, hairline violet outline, only a few small cyan/magenta horizontal glitch accents. The N must look like a clean graphic brand mark over artwork, NOT a physical object standing in scene. NO serifs, NO thick bevel, NO chrome, NO metal extrusion, NO trophy shape, NO mirror reflections. No letters or labels under N, no wordmark, no product text. Game scenery must stay clearly recognizable around it, refined dark edges, elegant restrained contrast, no abstract ribbons. Output one finished square asset.",
+  "tool": "Local ComfyUI via image-gen MCP (Juggernaut XI v11, SDXL)",
+  "settings": {
+    "size": "1256x1256 (1024 base + hires pass), resized to 1254",
+    "steps": 30,
+    "cfg": 4.5,
+    "sampler": "dpmpp_2m karras",
+    "hires_denoise": 0.5
+  },
+  "style_suffix": "clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text",
+  "logo": "public/assets/logo-still.png composited at 50% width over a radial darken (0.45) with a tinted glow; image-genration/compose_brand.py",
   "variants": [
     {
       "id": "gtav",
-      "path": "C:\\Users\\navjo\\.codex\\generated_images\\01a0b3a1-e8ce-7a22-bfeb-aa5567d8e475\\exec-1e07b2f6-25d7-4eb3-a077-7f74cb91b120.png"
+      "seed": 101,
+      "glow": "#be5aff",
+      "prompt": "GTA V key art, view from Vinewood hills over Los Santos city skyline at dusk, sunset over the ocean, palm tree silhouettes framing the edges, empty dark sky in the center, deep violet and orange color grade, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
     },
     {
       "id": "fivem",
-      "path": "C:\\Users\\navjo\\.codex\\generated_images\\01a0b3a1-e8ce-7a22-bfeb-aa5567d8e475\\exec-29feacf6-d9a5-4958-a667-79a90a4febde.png"
+      "seed": 111,
+      "glow": "#3ce0ff",
+      "prompt": "GTA roleplay city street at night, wide cinematic view down a neon-lit downtown boulevard, parked tuned sports cars, wet asphalt reflections, electric cyan and violet neon signs, palm trees, skyscrapers in the distance, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
     },
     {
       "id": "redm",
-      "path": "C:\\Users\\navjo\\.codex\\generated_images\\01a0b3a1-e8ce-7a22-bfeb-aa5567d8e475\\exec-be36f0d0-9afe-493c-9600-2e5014c6caff.png"
-    },
-    {
-      "id": "r6",
-      "path": "C:\\Users\\navjo\\.codex\\generated_images\\01a0b3a1-e8ce-7a22-bfeb-aa5567d8e475\\exec-5ddcb7dc-0df8-463a-a57b-466613238a21.png"
+      "seed": 121,
+      "glow": "#ff4a4a",
+      "prompt": "wild west frontier town main street at night, wooden saloon buildings with glowing lanterns and warm windows, dirt road, hitching posts, mountains under a deep crimson and violet night sky, copper light, Red Dead style, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
     },
     {
       "id": "rdr2",
-      "path": "C:\\Users\\navjo\\.codex\\generated_images\\01a0b3a1-e8ce-7a22-bfeb-aa5567d8e475\\exec-c3f31e74-4325-4e93-82cc-0db48b0280c4.png"
+      "seed": 131,
+      "glow": "#ffae42",
+      "prompt": "Red Dead Redemption 2 key art, vast american frontier landscape at golden hour, view from a rocky ridge over a river valley, pine forests, snowy mountains, warm amber sunset light with violet shadows, a lone saddled horse silhouette on the ridge edge, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
+    },
+    {
+      "id": "r6",
+      "seed": 141,
+      "glow": "#a8d4ff",
+      "prompt": "tactical shooter key art, fortified concrete compound at night in snowy mountains, floodlights, watchtower, barricaded windows, icy silver-blue moonlight with violet shadows, light snowfall, Rainbow Six Siege style, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
+    },
+    {
+      "id": "free",
+      "seed": 151,
+      "glow": "#7dffd0",
+      "prompt": "GTA V key art, coastal highway along ocean cliffs at early dawn, calm sea, palm trees, soft mint teal and lavender sky, gentle morning light, distant lighthouse, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
+    },
+    {
+      "id": "vip",
+      "seed": 161,
+      "glow": "#b47bff",
+      "prompt": "GTA V key art, luxury marina at night, sleek superyachts on calm water, city skyline lights reflecting, rich amethyst purple and platinum color grade, palm trees, elegant premium atmosphere, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
+    },
+    {
+      "id": "mvp",
+      "seed": 171,
+      "glow": "#ffd27a",
+      "prompt": "GTA V key art, modern luxury hilltop mansion with infinity pool at golden hour overlooking the city, champagne gold sunlight with violet shadows, palm trees, glamorous atmosphere, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
+    },
+    {
+      "id": "mvp-plus",
+      "seed": 181,
+      "glow": "#ff7ab8",
+      "prompt": "GTA V key art, skyscraper rooftop helipad at sunset high above the city, glowing skyline below, rose gold and magenta sky with violet clouds, luxury helicopter parked at the edge, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
     }
   ]
 }

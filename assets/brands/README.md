@@ -1,5 +1,5 @@
 # Nenyoo logo family
 
-Game logos: original blocky white N with cyan/magenta glitch accents over illustrated game-inspired environments. Generated with the built-in image_gen tool. Full prompts and provenance in game-prompts.json.
+Game logos: the original glitch N (`../logo-still.png`) with a per-product tinted glow over cinematic, game-inspired scenes. Backgrounds generated locally with ComfyUI (Juggernaut XI) through the image-gen MCP; the N is composited in code so it stays exact. Prompts, seeds and settings are in game-prompts.json.
 
-GTA V tier assets reuse the current GTA V artwork. Free-access cards select the artwork for their game. PNG originals and optimized 512px WebP images are included. Product names remain HTML text on the site.
+Every product and tier (GTA V, FiveM, RedM, R6, RDR2, Free, VIP, MVP, MVP+) has its own artwork. PNG originals (1254px) and optimized 512px WebP images are included. Product names remain HTML text on the site.
