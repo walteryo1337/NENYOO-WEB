@@ -1,68 +1,62 @@
 {
   "tool": "Local ComfyUI via image-gen MCP (Juggernaut XI v11, SDXL)",
-  "settings": {
-    "size": "1256x1256 (1024 base + hires pass), resized to 1254",
-    "steps": 30,
-    "cfg": 4.5,
-    "sampler": "dpmpp_2m karras",
-    "hires_denoise": 0.5
-  },
-  "style_suffix": "clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text",
-  "logo": "public/assets/logo-still.png composited at 50% width over a radial darken (0.45) with a tinted glow; image-genration/compose_brand.py",
+  "style": "calm cinematic night (option C); original glitch N composited unchanged",
+  "pipeline": "scene 1256px -> 4x-UltraSharp + repaint at 2x (denoise 0.25) -> compose_brand.py (scale 0.5, shade 0.45, glow) -> 1254px",
+  "script": "image-genration/jobs/cards_night_all.py",
   "variants": [
     {
       "id": "gtav",
-      "seed": 101,
+      "seed": 2201,
       "glow": "#be5aff",
-      "prompt": "GTA V key art, view from Vinewood hills over Los Santos city skyline at dusk, sunset over the ocean, palm tree silhouettes framing the edges, empty dark sky in the center, deep violet and orange color grade, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
+      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, view from Vinewood hills over the glittering Los Santos city lights, palm tree silhouettes framing both sides, winding road with car light trails, moon and scattered clouds, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
     },
     {
       "id": "fivem",
-      "seed": 111,
+      "seed": 2211,
       "glow": "#3ce0ff",
-      "prompt": "GTA roleplay city street at night, wide cinematic view down a neon-lit downtown boulevard, parked tuned sports cars, wet asphalt reflections, electric cyan and violet neon signs, palm trees, skyscrapers in the distance, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
+      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, neon downtown boulevard seen from above, tuned sports cars parked with glowing underglow, wet street reflections, palm tree silhouettes, electric cyan and violet neon glow, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
     },
     {
       "id": "redm",
-      "seed": 121,
+      "seed": 2221,
       "glow": "#ff4a4a",
-      "prompt": "wild west frontier town main street at night, wooden saloon buildings with glowing lanterns and warm windows, dirt road, hitching posts, mountains under a deep crimson and violet night sky, copper light, Red Dead style, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
-    },
-    {
-      "id": "rdr2",
-      "seed": 131,
-      "glow": "#ffae42",
-      "prompt": "Red Dead Redemption 2 key art, vast american frontier landscape at golden hour, view from a rocky ridge over a river valley, pine forests, snowy mountains, warm amber sunset light with violet shadows, a lone saddled horse silhouette on the ridge edge, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
+      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, wild west frontier town main street, wooden saloons with glowing lantern-lit windows, horses at a hitching post, moonlit mountains, deep crimson and violet night sky, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
     },
     {
       "id": "r6",
-      "seed": 141,
+      "seed": 2231,
       "glow": "#a8d4ff",
-      "prompt": "tactical shooter key art, fortified concrete compound at night in snowy mountains, floodlights, watchtower, barricaded windows, icy silver-blue moonlight with violet shadows, light snowfall, Rainbow Six Siege style, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
+      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, fortified concrete compound in snowy mountains, bright floodlights, watchtower, barbed wire fence, icy silver-blue moonlight, light snowfall, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
+    },
+    {
+      "id": "rdr2",
+      "seed": 2241,
+      "glow": "#ffae42",
+      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, american frontier valley, a campfire glowing beside a river, pine forests, snowy mountains under a full moon, warm amber firelight, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
     },
     {
       "id": "free",
-      "seed": 151,
+      "seed": 2251,
       "glow": "#7dffd0",
-      "prompt": "GTA V key art, coastal highway along ocean cliffs at early dawn, calm sea, palm trees, soft mint teal and lavender sky, gentle morning light, distant lighthouse, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
+      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, coastal highway along ocean cliffs, moonlight shimmering on the sea, lighthouse beam, palm tree silhouettes, soft mint teal and lavender night, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
     },
     {
       "id": "vip",
-      "seed": 161,
+      "seed": 2261,
       "glow": "#b47bff",
-      "prompt": "GTA V key art, luxury marina at night, sleek superyachts on calm water, city skyline lights reflecting, rich amethyst purple and platinum color grade, palm trees, elegant premium atmosphere, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
+      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, luxury marina, sleek superyachts on calm water, city skyline lights reflecting, palm tree silhouettes, rich amethyst and platinum glow, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
     },
     {
       "id": "mvp",
-      "seed": 171,
+      "seed": 2271,
       "glow": "#ffd27a",
-      "prompt": "GTA V key art, modern luxury hilltop mansion with infinity pool at golden hour overlooking the city, champagne gold sunlight with violet shadows, palm trees, glamorous atmosphere, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
+      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, modern hilltop mansion with a glowing infinity pool overlooking the city lights, palm tree silhouettes, champagne gold lights, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
     },
     {
       "id": "mvp-plus",
-      "seed": 181,
+      "seed": 2281,
       "glow": "#ff7ab8",
-      "prompt": "GTA V key art, skyscraper rooftop helipad at sunset high above the city, glowing skyline below, rose gold and magenta sky with violet clouds, luxury helicopter parked at the edge, clean uncluttered composition, darker empty center, soft vignette, painterly digital illustration, highly detailed, no people, no text"
+      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, skyscraper rooftop helipad high above the glowing city, luxury helicopter with lights, rose gold and magenta night sky, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
     }
   ]
 }
