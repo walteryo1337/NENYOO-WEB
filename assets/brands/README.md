@@ -1,5 +1,7 @@
-# Nenyoo logo family
+# Nenyoo game brand cards
 
-Product and tier cards: the original glitch N (`../logo-still.png`, unchanged) with a per-product tinted glow over calm cinematic night scenes, one scene per game or tier. Backgrounds generated locally with ComfyUI (Juggernaut XI) through the image-gen MCP with a 2x detail pass; the N is composited in code so it stays exact. Prompts, seeds and settings are in game-prompts.json.
+Five square game scenes with the Nenyoo white, cyan and magenta glitch N, recreated using the built-in image_gen tool with logo-still.png as the reference. The generated mark follows the original identity; it is not a pixel-exact composite.
 
-PNG originals (1254px) and optimized 512px WebP images are included. Product names remain HTML text on the site.
+GTA V: rooftop heist. FiveM: diner traffic stop. RedM: saloon poker. Rainbow Six Siege: embassy rappel. RDR2: canyon train robbery.
+
+Full-size PNGs and optimized 512x512 WebPs are included. Exact prompts are in game-prompts.json. prompts.json records an older design exploration. GTA V license tiers share the GTA V card.

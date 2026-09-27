@@ -1,62 +1,18 @@
 {
-  "tool": "Local ComfyUI via image-gen MCP (Juggernaut XI v11, SDXL)",
-  "style": "calm cinematic night (option C); original glitch N composited unchanged",
-  "pipeline": "scene 1256px -> 4x-UltraSharp + repaint at 2x (denoise 0.25) -> compose_brand.py (scale 0.5, shade 0.45, glow) -> 1254px",
-  "script": "image-genration/jobs/cards_night_all.py",
-  "variants": [
-    {
-      "id": "gtav",
-      "seed": 2201,
-      "glow": "#be5aff",
-      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, view from Vinewood hills over the glittering Los Santos city lights, palm tree silhouettes framing both sides, winding road with car light trails, moon and scattered clouds, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
-    },
-    {
-      "id": "fivem",
-      "seed": 2211,
-      "glow": "#3ce0ff",
-      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, neon downtown boulevard seen from above, tuned sports cars parked with glowing underglow, wet street reflections, palm tree silhouettes, electric cyan and violet neon glow, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
-    },
-    {
-      "id": "redm",
-      "seed": 2221,
-      "glow": "#ff4a4a",
-      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, wild west frontier town main street, wooden saloons with glowing lantern-lit windows, horses at a hitching post, moonlit mountains, deep crimson and violet night sky, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
-    },
-    {
-      "id": "r6",
-      "seed": 2231,
-      "glow": "#a8d4ff",
-      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, fortified concrete compound in snowy mountains, bright floodlights, watchtower, barbed wire fence, icy silver-blue moonlight, light snowfall, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
-    },
-    {
-      "id": "rdr2",
-      "seed": 2241,
-      "glow": "#ffae42",
-      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, american frontier valley, a campfire glowing beside a river, pine forests, snowy mountains under a full moon, warm amber firelight, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
-    },
-    {
-      "id": "free",
-      "seed": 2251,
-      "glow": "#7dffd0",
-      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, coastal highway along ocean cliffs, moonlight shimmering on the sea, lighthouse beam, palm tree silhouettes, soft mint teal and lavender night, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
-    },
-    {
-      "id": "vip",
-      "seed": 2261,
-      "glow": "#b47bff",
-      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, luxury marina, sleek superyachts on calm water, city skyline lights reflecting, palm tree silhouettes, rich amethyst and platinum glow, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
-    },
-    {
-      "id": "mvp",
-      "seed": 2271,
-      "glow": "#ffd27a",
-      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, modern hilltop mansion with a glowing infinity pool overlooking the city lights, palm tree silhouettes, champagne gold lights, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
-    },
-    {
-      "id": "mvp-plus",
-      "seed": 2281,
-      "glow": "#ff7ab8",
-      "prompt": "cinematic wide shot, painterly digital illustration, highly detailed, calm atmospheric, skyscraper rooftop helipad high above the glowing city, luxury helicopter with lights, rose gold and magenta night sky, at night, dark night sky with stars, glowing lights, rich deep blues and purples with warm light accents, busy detailed scenery around the edges, a clear darker open area in the center of the frame, square composition, no people"
-    }
-  ]
+  "tool": "built-in image_gen",
+  "reference": "Site/public/assets/logo-still.png",
+  "prompts": {
+    "gtav": "Use case: logo-brand. Create a finished square 1:1 Nenyoo game brand card, 1536x1536. Reference image is the brand mark: keep the recognizable bold wide angular white capital N with magenta and cyan horizontal digital glitch edges. Center one large N across approximately 50 percent of the square width. White N is the first focal point, game scene second. Give the mark subtle dark atmospheric separation, not a rectangular label. Background is a fully developed game-related scene, full bleed with no collage gutters. Position important character faces and action around the N so they remain visible. Professional coherent lighting, anatomy and perspective, readable at thumbnail size. No lettering except the N, no game names, no wordmark, no watermark, no UI. Do not use a car meetup, rural portrait, misty town arrival, indoor tactical breach or lone horseback sunset composition. GTA V promotional loading-screen illustration: a rooftop heist high above Los Santos at night. Two adult masked heist crew in dark suits near opposite lower corners, duffel bags and a few scattered banknotes beside a rooftop skylight, distant police helicopter with a narrow searchlight in the upper left, glittering downtown towers and rooftop antennae. One crew member crouches near the roof ledge, the other watches the skyline. Strong bold ink outlines, crisp sculpted cel shading, polished hand-painted editorial key art. Deep violet city night, teal glass towers, warm gold window lights and a restrained magenta horizon. Dramatic rooftop perspective, slick sophisticated criminal-thriller energy. Central N remains clean over dark rooftop atmosphere.",
+    "fivem": "Use case: logo-brand. Create a finished square 1:1 Nenyoo game brand card, 1536x1536. Reference image is the brand mark: keep the recognizable bold wide angular white capital N with magenta and cyan horizontal digital glitch edges. Center one large N across approximately 50 percent of the square width. White N is the first focal point, game scene second. Give the mark subtle dark atmospheric separation, not a rectangular label. Background is a fully developed game-related scene, full bleed with no collage gutters. Position important character faces and action around the N so they remain visible. Professional coherent lighting, anatomy and perspective, readable at thumbnail size. No lettering except the N, no game names, no wordmark, no watermark, no UI. Do not use a car meetup, rural portrait, misty town arrival, indoor tactical breach or lone horseback sunset composition. FiveM roleplay cinematic key art: nighttime police traffic stop outside a retro roadside diner in Los Santos. Side view of a dark teal civilian sedan low across frame, black-and-white patrol car at lower right with restrained red and blue roof lights. Adult officer stands by driver window at far left; adult driver visible naturally inside car. Diner canopy and chrome windows frame the upper right, palms and damp road reflect red-blue and peach neon light. No readable diner signage. Scene tells a grounded multiplayer roleplay story, no shooting or chase, no sports-car garage. Premium realistic videogame cinematic render with subtle painterly polish, believable cars and people, indigo night, cyan and coral-red accents. N centered over a quieter dark area between scene layers.",
+    "redm": "Use case: logo-brand. Create a finished square 1:1 Nenyoo game brand card, 1536x1536. Reference image is the brand mark: keep the recognizable bold wide angular white capital N with magenta and cyan horizontal digital glitch edges. Center one large N across approximately 50 percent of the square width. White N is the first focal point, game scene second. Give the mark subtle dark atmospheric separation, not a rectangular label. Background is a fully developed game-related scene, full bleed with no collage gutters. Position important character faces and action around the N so they remain visible. Professional coherent lighting, anatomy and perspective, readable at thumbnail size. No lettering except the N, no game names, no wordmark, no watermark, no UI. Do not use a car meetup, rural portrait, misty town arrival, indoor tactical breach or lone horseback sunset composition. RedM frontier-roleplay artwork: warmly lit interior of an 1899 timber saloon. Eye-level view past a poker table across lower third with cards, chips and brass lamp, adult frontier gamblers at far left and right edges in worn waistcoats and period hats, their expressions and hands believable. Upper background has carved wooden bar, antique mirror, bottles and staircase disappearing into rich shadow. Amber oil-lantern light, tobacco haze and weathered wood, rich burgundy cloth, aged brass and deep walnut brown. Painterly cinematic western illustration with rich tactile brushwork and natural skin, intimate social storytelling. Keep center background dark and composed behind the N, no readable card ranks, signage or typography, no modern objects.",
+    "r6": "Use case: logo-brand. Create a finished square 1:1 Nenyoo game brand card, 1536x1536. Reference image is the brand mark: keep the recognizable bold wide angular white capital N with magenta and cyan horizontal digital glitch edges. Center one large N across approximately 50 percent of the square width. White N is the first focal point, game scene second. Give the mark subtle dark atmospheric separation, not a rectangular label. Background is a fully developed game-related scene, full bleed with no collage gutters. Position important character faces and action around the N so they remain visible. Professional coherent lighting, anatomy and perspective, readable at thumbnail size. No lettering except the N, no game names, no wordmark, no watermark, no UI. Do not use a car meetup, rural portrait, misty town arrival, indoor tactical breach or lone horseback sunset composition. Rainbow Six Siege tactical game artwork: exterior nighttime rappel assault on a fortified modern embassy facade. Two helmeted adult operators on taut rappel ropes flank the central N, one high at left and one lower at right, boots braced against stone exterior, realistic harnesses and gear. A bright illuminated upper window, broken glass at a separate lower window, architectural verticals and smoky night atmosphere, faint searchlight below. Dramatic looking-up perspective yet coherent gravity and rope attachment, no casualties or gore. AAA realistic tactical promotional render, cold steel blue and graphite with pale warm light from windows and tiny red status-light accents. Strong angular architectural framing, disciplined detail, clearly exterior action rather than indoor breach. Dark facade behind central logo.",
+    "rdr2": "Use case: logo-brand. Create a finished square 1:1 Nenyoo game brand card, 1536x1536. Reference image is the brand mark: keep the recognizable bold wide angular white capital N with magenta and cyan horizontal digital glitch edges. Center one large N across approximately 50 percent of the square width. White N is the first focal point, game scene second. Give the mark subtle dark atmospheric separation, not a rectangular label. Background is a fully developed game-related scene, full bleed with no collage gutters. Position important character faces and action around the N so they remain visible. Professional coherent lighting, anatomy and perspective, readable at thumbnail size. No lettering except the N, no game names, no wordmark, no watermark, no UI. Do not use a car meetup, rural portrait, misty town arrival, indoor tactical breach or lone horseback sunset composition. Red Dead Redemption 2 western action poster: steam-train robbery winding through a rugged dusty canyon. Black steam locomotive cuts diagonally through lower right with warm glowing headlamp and thick smoke curling through upper background. Two small adult mounted outlaws on running horses along the track at left, distant figures on train roof; believable scale, no close-up face portrait, no gore. Rust-red canyon walls frame square, windblown dust and telegraph poles establish epic frontier movement. Dramatic expressive hand-painted western illustration, strong inked silhouettes, coarse dry-brush texture, burnt orange and dusty bone contrasted with charcoal locomotive and subdued crimson details. Keep central smoke darker and quieter behind the white N, original atmospheric storytelling, no huge sun or static lone-rider ridge."
+  },
+  "scenes": {
+    "gtav": "Los Santos rooftop heist",
+    "fivem": "Traffic stop outside a neon diner",
+    "redm": "Saloon poker table",
+    "r6": "Embassy rappel assault",
+    "rdr2": "Canyon steam-train robbery"
+  }
 }
