@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /dashboard
-Disallow: /forgot-password
+Sitemap: https://nenyoomenu.com/sitemap.xml
