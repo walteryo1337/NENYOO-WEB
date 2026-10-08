@@ -1,7 +1,5 @@
-# Nenyoo game brand cards
+# Nenyoo game logo tiles
 
-Five square game scenes with the Nenyoo white, cyan and magenta glitch N, recreated using the built-in image_gen tool with logo-still.png as the reference. The generated mark follows the original identity; it is not a pixel-exact composite.
+Square tiles with each game's official logo on a dark background with a soft glow in the game's colour. The site and the loader both load these files, so replacing them here updates both.
 
-GTA V: rooftop heist. FiveM: diner traffic stop. RedM: saloon poker. Rainbow Six Siege: embassy rappel. RDR2: canyon train robbery.
-
-Full-size PNGs and optimized 512x512 WebPs are included. Exact prompts are in game-prompts.json. prompts.json records an older design exploration. GTA V license tiers share the GTA V card.
+Sources: GTA V, Red Dead Redemption 2 and Rainbow Six Siege use the official Steam library logos; FiveM and RedM use the wordmarks from fivem.net and redm.net. Full-size 1254x1254 PNGs and 512x512 WebPs are included. GTA V license tiers share the GTA V tile.
