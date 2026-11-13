@@ -1,0 +1,45 @@
+Model: broadway
+Plate Style: 0
+Plate Text: 33YRU333
+Primary Colour: 161
+Secondary Colour: 49
+Pearl Colour: 159
+Wheel Colour: 0
+Wheel Type: 1
+Front Bumper: 2
+Rear Bumper: 0
+Sideskirt: 2
+Exhaust: 3
+Chassis: 1
+Hood: 6
+Fender: 3
+Right Fender: 3
+Roof: 2
+Engine: 4
+Brakes: 3
+Transmission: 3
+Horns: 5
+Suspension: 4
+Armor: 5
+Nitrous: No
+Turbo: Yes
+Subwoofer: No
+Tiresmoke: No
+Unk21: No
+Headlights: 1
+Front Wheels: 17
+Livery: 12
+Tyre Smoke Colour: #ffffff
+Window Tint: 0
+Custom Primary Colour: #f4b330
+Custom Secondary Colour: #6b7eb6
+Neon Colour: #000000
+Neon Front: Yes
+Neon Back: Yes
+Neon Left: Yes
+Neon Right: Yes
+Interior Colour: 88
+Dashboard Colour: 32
+Tyres Mode: 2
+Extra 1: Yes
+Extra 2: Yes

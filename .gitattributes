@@ -1,0 +1,2 @@
+# Preserve original community preset bytes, including plate text and line endings.
+presets/** -text -whitespace

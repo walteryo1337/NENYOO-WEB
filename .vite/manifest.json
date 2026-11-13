@@ -1,0 +1,157 @@
+{
+  "_account-C8GZwl_O.css": {
+    "file": "assets/account-C8GZwl_O.css",
+    "src": "_account-C8GZwl_O.css"
+  },
+  "_presets-BNqQmzUb.css": {
+    "file": "assets/presets-BNqQmzUb.css",
+    "src": "_presets-BNqQmzUb.css"
+  },
+  "_resources-CxFPFBLX.css": {
+    "file": "assets/resources-CxFPFBLX.css",
+    "src": "_resources-CxFPFBLX.css"
+  },
+  "features/assets/gtav-v2.webp": {
+    "file": "assets/gtav-v2-BvJIqbop.webp",
+    "src": "features/assets/gtav-v2.webp"
+  },
+  "features/data/catalogs.json": {
+    "file": "assets/catalogs-D73V4qNF.json",
+    "src": "features/data/catalogs.json"
+  },
+  "features/data/menu.json": {
+    "file": "assets/menu-CODMaJRd.json",
+    "src": "features/data/menu.json"
+  },
+  "index.html": {
+    "file": "assets/index-CVlrwi16.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/lua-page.tsx",
+      "src/tools-page.tsx",
+      "src/auth-pages.tsx",
+      "src/features-page.tsx",
+      "src/live-dashboard.tsx",
+      "src/mod-pages.tsx",
+      "src/preset-pages.tsx",
+      "src/script-pages.tsx",
+      "src/release-pages.tsx"
+    ],
+    "css": [
+      "assets/index-CyKRhwrv.css"
+    ]
+  },
+  "src/auth-pages.tsx": {
+    "file": "assets/auth-pages-WGqQyS4L.js",
+    "name": "auth-pages",
+    "src": "src/auth-pages.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/account-C8GZwl_O.css"
+    ]
+  },
+  "src/features-page.tsx": {
+    "file": "assets/features-page-D9idf0u2.js",
+    "name": "features-page",
+    "src": "src/features-page.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/features-page-CGuWFw17.css"
+    ],
+    "assets": [
+      "assets/menu-CODMaJRd.json",
+      "assets/catalogs-D73V4qNF.json",
+      "assets/gtav-v2-BvJIqbop.webp"
+    ]
+  },
+  "src/live-dashboard.tsx": {
+    "file": "assets/live-dashboard-BtPIy-VI.js",
+    "name": "live-dashboard",
+    "src": "src/live-dashboard.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/account-C8GZwl_O.css"
+    ]
+  },
+  "src/lua-page.tsx": {
+    "file": "assets/lua-page-9xFJRJY3.js",
+    "name": "lua-page",
+    "src": "src/lua-page.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "src/mod-pages.tsx": {
+    "file": "assets/mod-pages-Co4c2e_X.js",
+    "name": "mod-pages",
+    "src": "src/mod-pages.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/mod-pages-Cu6NNNWn.css",
+      "assets/presets-BNqQmzUb.css"
+    ]
+  },
+  "src/preset-pages.tsx": {
+    "file": "assets/preset-pages-t0VWV3Wi.js",
+    "name": "preset-pages",
+    "src": "src/preset-pages.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/presets-BNqQmzUb.css"
+    ]
+  },
+  "src/release-pages.tsx": {
+    "file": "assets/release-pages-CawYTZ0Y.js",
+    "name": "release-pages",
+    "src": "src/release-pages.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/release-pages-CuzOHVeE.css"
+    ]
+  },
+  "src/script-pages.tsx": {
+    "file": "assets/script-pages-DQ8Rw0Jl.js",
+    "name": "script-pages",
+    "src": "src/script-pages.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/resources-CxFPFBLX.css"
+    ]
+  },
+  "src/tools-page.tsx": {
+    "file": "assets/tools-page-BjXDPGJY.js",
+    "name": "tools-page",
+    "src": "src/tools-page.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/resources-CxFPFBLX.css"
+    ]
+  }
+}
