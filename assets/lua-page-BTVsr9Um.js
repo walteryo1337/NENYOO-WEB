@@ -1,4 +1,4 @@
-import{r as a,j as s,A as D,t,C as S}from"./index-CVlrwi16.js";const N=new Map;function k(r){return N.has(r)||N.set(r,fetch(`/reference/${r}.json`).then(i=>{if(!i.ok)throw Error();return i.json()}).catch(i=>{throw N.delete(r),i})),N.get(r)}const Y=`-- Scripts/User/heal_me.lua
+import{r as a,j as s,A as D,t,C as S}from"./index-CI9nFg8l.js";const N=new Map;function k(r){return N.has(r)||N.set(r,fetch(`/reference/${r}.json`).then(i=>{if(!i.ok)throw Error();return i.json()}).catch(i=>{throw N.delete(r),i})),N.get(r)}const Y=`-- Scripts/User/heal_me.lua
 -- A plain script becomes an on/off toggle.
 script.on_tick(function()
     local me = PLAYER.PLAYER_PED_ID()

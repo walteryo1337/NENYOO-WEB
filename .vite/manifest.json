@@ -15,6 +15,18 @@
     "file": "assets/gtav-v2-BvJIqbop.webp",
     "src": "features/assets/gtav-v2.webp"
   },
+  "features/assets/native/inter-regular.woff": {
+    "file": "assets/inter-regular-D83-EukI.woff",
+    "src": "features/assets/native/inter-regular.woff"
+  },
+  "features/assets/native/inter-semibold.woff": {
+    "file": "assets/inter-semibold-_wPou2Xm.woff",
+    "src": "features/assets/native/inter-semibold.woff"
+  },
+  "features/assets/native/outfit-light.woff": {
+    "file": "assets/outfit-light-XxfxKorr.woff",
+    "src": "features/assets/native/outfit-light.woff"
+  },
   "features/data/catalogs.json": {
     "file": "assets/catalogs-D73V4qNF.json",
     "src": "features/data/catalogs.json"
@@ -24,7 +36,7 @@
     "src": "features/data/menu.json"
   },
   "index.html": {
-    "file": "assets/index-CVlrwi16.js",
+    "file": "assets/index-CI9nFg8l.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -44,7 +56,7 @@
     ]
   },
   "src/auth-pages.tsx": {
-    "file": "assets/auth-pages-WGqQyS4L.js",
+    "file": "assets/auth-pages-D7_UpFYj.js",
     "name": "auth-pages",
     "src": "src/auth-pages.tsx",
     "isDynamicEntry": true,
@@ -56,7 +68,7 @@
     ]
   },
   "src/features-page.tsx": {
-    "file": "assets/features-page-D9idf0u2.js",
+    "file": "assets/features-page-PFhMeKEr.js",
     "name": "features-page",
     "src": "src/features-page.tsx",
     "isDynamicEntry": true,
@@ -64,16 +76,19 @@
       "index.html"
     ],
     "css": [
-      "assets/features-page-CGuWFw17.css"
+      "assets/features-page-CGCTVGEG.css"
     ],
     "assets": [
       "assets/menu-CODMaJRd.json",
       "assets/catalogs-D73V4qNF.json",
-      "assets/gtav-v2-BvJIqbop.webp"
+      "assets/gtav-v2-BvJIqbop.webp",
+      "assets/inter-regular-D83-EukI.woff",
+      "assets/inter-semibold-_wPou2Xm.woff",
+      "assets/outfit-light-XxfxKorr.woff"
     ]
   },
   "src/live-dashboard.tsx": {
-    "file": "assets/live-dashboard-BtPIy-VI.js",
+    "file": "assets/live-dashboard-TLFgG_tc.js",
     "name": "live-dashboard",
     "src": "src/live-dashboard.tsx",
     "isDynamicEntry": true,
@@ -85,7 +100,7 @@
     ]
   },
   "src/lua-page.tsx": {
-    "file": "assets/lua-page-9xFJRJY3.js",
+    "file": "assets/lua-page-BTVsr9Um.js",
     "name": "lua-page",
     "src": "src/lua-page.tsx",
     "isDynamicEntry": true,
@@ -94,7 +109,7 @@
     ]
   },
   "src/mod-pages.tsx": {
-    "file": "assets/mod-pages-Co4c2e_X.js",
+    "file": "assets/mod-pages-BJmTGcQ6.js",
     "name": "mod-pages",
     "src": "src/mod-pages.tsx",
     "isDynamicEntry": true,
@@ -107,7 +122,7 @@
     ]
   },
   "src/preset-pages.tsx": {
-    "file": "assets/preset-pages-t0VWV3Wi.js",
+    "file": "assets/preset-pages-IXObBHsm.js",
     "name": "preset-pages",
     "src": "src/preset-pages.tsx",
     "isDynamicEntry": true,
@@ -119,7 +134,7 @@
     ]
   },
   "src/release-pages.tsx": {
-    "file": "assets/release-pages-CawYTZ0Y.js",
+    "file": "assets/release-pages-CAOctts3.js",
     "name": "release-pages",
     "src": "src/release-pages.tsx",
     "isDynamicEntry": true,
@@ -131,7 +146,7 @@
     ]
   },
   "src/script-pages.tsx": {
-    "file": "assets/script-pages-DQ8Rw0Jl.js",
+    "file": "assets/script-pages-PDD0UFXd.js",
     "name": "script-pages",
     "src": "src/script-pages.tsx",
     "isDynamicEntry": true,
@@ -143,7 +158,7 @@
     ]
   },
   "src/tools-page.tsx": {
-    "file": "assets/tools-page-BjXDPGJY.js",
+    "file": "assets/tools-page-BBSCR3nP.js",
     "name": "tools-page",
     "src": "src/tools-page.tsx",
     "isDynamicEntry": true,
