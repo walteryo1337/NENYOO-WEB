@@ -1,7 +1,21 @@
 {
-  "_account-C8GZwl_O.css": {
-    "file": "assets/account-C8GZwl_O.css",
-    "src": "_account-C8GZwl_O.css"
+  "_account-Cu5GlE8s.css": {
+    "file": "assets/account-Cu5GlE8s.css",
+    "src": "_account-Cu5GlE8s.css"
+  },
+  "_feature-page-shared-BNoPckKk.css": {
+    "file": "assets/feature-page-shared-BNoPckKk.css",
+    "src": "_feature-page-shared-BNoPckKk.css"
+  },
+  "_feature-page-shared-_21sqHP7.js": {
+    "file": "assets/feature-page-shared-_21sqHP7.js",
+    "name": "feature-page-shared",
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "assets/feature-page-shared-BNoPckKk.css"
+    ]
   },
   "_presets-BNqQmzUb.css": {
     "file": "assets/presets-BNqQmzUb.css",
@@ -11,32 +25,8 @@
     "file": "assets/resources-CxFPFBLX.css",
     "src": "_resources-CxFPFBLX.css"
   },
-  "features/assets/gtav-v2.webp": {
-    "file": "assets/gtav-v2-BvJIqbop.webp",
-    "src": "features/assets/gtav-v2.webp"
-  },
-  "features/assets/native/inter-regular.woff": {
-    "file": "assets/inter-regular-D83-EukI.woff",
-    "src": "features/assets/native/inter-regular.woff"
-  },
-  "features/assets/native/inter-semibold.woff": {
-    "file": "assets/inter-semibold-_wPou2Xm.woff",
-    "src": "features/assets/native/inter-semibold.woff"
-  },
-  "features/assets/native/outfit-light.woff": {
-    "file": "assets/outfit-light-XxfxKorr.woff",
-    "src": "features/assets/native/outfit-light.woff"
-  },
-  "features/data/catalogs.json": {
-    "file": "assets/catalogs-D73V4qNF.json",
-    "src": "features/data/catalogs.json"
-  },
-  "features/data/menu.json": {
-    "file": "assets/menu-CODMaJRd.json",
-    "src": "features/data/menu.json"
-  },
   "index.html": {
-    "file": "assets/index-CI9nFg8l.js",
+    "file": "assets/index-Cjrk9X5g.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -44,6 +34,7 @@
       "src/lua-page.tsx",
       "src/tools-page.tsx",
       "src/auth-pages.tsx",
+      "src/rdr2-features-page.tsx",
       "src/features-page.tsx",
       "src/live-dashboard.tsx",
       "src/mod-pages.tsx",
@@ -52,11 +43,11 @@
       "src/release-pages.tsx"
     ],
     "css": [
-      "assets/index-CyKRhwrv.css"
+      "assets/index-BlDkHUZ3.css"
     ]
   },
   "src/auth-pages.tsx": {
-    "file": "assets/auth-pages-D7_UpFYj.js",
+    "file": "assets/auth-pages-Bof0igyN.js",
     "name": "auth-pages",
     "src": "src/auth-pages.tsx",
     "isDynamicEntry": true,
@@ -64,31 +55,24 @@
       "index.html"
     ],
     "css": [
-      "assets/account-C8GZwl_O.css"
+      "assets/account-Cu5GlE8s.css"
     ]
   },
   "src/features-page.tsx": {
-    "file": "assets/features-page-PFhMeKEr.js",
+    "file": "assets/features-page-B9T0Hx93.js",
     "name": "features-page",
     "src": "src/features-page.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "index.html"
+      "index.html",
+      "_feature-page-shared-_21sqHP7.js"
     ],
     "css": [
-      "assets/features-page-CGCTVGEG.css"
-    ],
-    "assets": [
-      "assets/menu-CODMaJRd.json",
-      "assets/catalogs-D73V4qNF.json",
-      "assets/gtav-v2-BvJIqbop.webp",
-      "assets/inter-regular-D83-EukI.woff",
-      "assets/inter-semibold-_wPou2Xm.woff",
-      "assets/outfit-light-XxfxKorr.woff"
+      "assets/features-page-DdT5Pk9m.css"
     ]
   },
   "src/live-dashboard.tsx": {
-    "file": "assets/live-dashboard-TLFgG_tc.js",
+    "file": "assets/live-dashboard-JmQIFtLP.js",
     "name": "live-dashboard",
     "src": "src/live-dashboard.tsx",
     "isDynamicEntry": true,
@@ -96,11 +80,11 @@
       "index.html"
     ],
     "css": [
-      "assets/account-C8GZwl_O.css"
+      "assets/account-Cu5GlE8s.css"
     ]
   },
   "src/lua-page.tsx": {
-    "file": "assets/lua-page-BTVsr9Um.js",
+    "file": "assets/lua-page-JPlMEPjy.js",
     "name": "lua-page",
     "src": "src/lua-page.tsx",
     "isDynamicEntry": true,
@@ -109,7 +93,7 @@
     ]
   },
   "src/mod-pages.tsx": {
-    "file": "assets/mod-pages-BJmTGcQ6.js",
+    "file": "assets/mod-pages-CdTQqcOs.js",
     "name": "mod-pages",
     "src": "src/mod-pages.tsx",
     "isDynamicEntry": true,
@@ -122,7 +106,7 @@
     ]
   },
   "src/preset-pages.tsx": {
-    "file": "assets/preset-pages-IXObBHsm.js",
+    "file": "assets/preset-pages-C3C4KAIU.js",
     "name": "preset-pages",
     "src": "src/preset-pages.tsx",
     "isDynamicEntry": true,
@@ -133,8 +117,21 @@
       "assets/presets-BNqQmzUb.css"
     ]
   },
+  "src/rdr2-features-page.tsx": {
+    "file": "assets/rdr2-features-page-Dc2XMUBB.js",
+    "name": "rdr2-features-page",
+    "src": "src/rdr2-features-page.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_feature-page-shared-_21sqHP7.js"
+    ],
+    "css": [
+      "assets/rdr2-features-page-BxvxSMlu.css"
+    ]
+  },
   "src/release-pages.tsx": {
-    "file": "assets/release-pages-CAOctts3.js",
+    "file": "assets/release-pages-w70x56cH.js",
     "name": "release-pages",
     "src": "src/release-pages.tsx",
     "isDynamicEntry": true,
@@ -146,7 +143,7 @@
     ]
   },
   "src/script-pages.tsx": {
-    "file": "assets/script-pages-PDD0UFXd.js",
+    "file": "assets/script-pages-Dz9t_AVg.js",
     "name": "script-pages",
     "src": "src/script-pages.tsx",
     "isDynamicEntry": true,
@@ -158,7 +155,7 @@
     ]
   },
   "src/tools-page.tsx": {
-    "file": "assets/tools-page-BBSCR3nP.js",
+    "file": "assets/tools-page-Duqcj7IZ.js",
     "name": "tools-page",
     "src": "src/tools-page.tsx",
     "isDynamicEntry": true,
